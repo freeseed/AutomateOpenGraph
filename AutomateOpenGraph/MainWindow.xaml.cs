@@ -125,7 +125,15 @@ namespace AutomateOpenGraph
             int itemCount = gridTable.Items.Count;
             int minutes = (itemCount * refreshInt) / 60;
             int seconds = (itemCount * refreshInt) % 60;
-            lbDataInfo.Content = "Total Record is " + gridTable.Items.Count + "  ( " + minutes.ToString() + " minutes and " + seconds.ToString() + " seconds to view )" ;
+            if (itemCount > 0)
+            {
+                lbMsg.Content = itemCount.ToString() + " records. Next Send Keys";
+            }
+            else
+            {
+                lbMsg.Content = "File has no record. Please select new file";
+            }
+            lbDataInfo.Content = "Total Record is " + itemCount.ToString() + "  ( " + minutes.ToString() + " minutes and " + seconds.ToString() + " seconds to view )";
 
 
         }

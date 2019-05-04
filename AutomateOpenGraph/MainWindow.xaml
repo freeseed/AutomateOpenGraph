@@ -7,11 +7,10 @@
         mc:Ignorable="d"
         Title="AutomateOpenGraph" Height="650" Width="800" WindowStartupLocation="CenterScreen" >
     <ScrollViewer VerticalScrollBarVisibility="Auto" >
-        
 
-    <Grid ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
-        <DockPanel>
-            <Menu DockPanel.Dock="Top">
+        <Grid >
+
+            <Menu  VerticalAlignment = "Top" >
                 <MenuItem Header="_File">
                     <MenuItem Header="_Open" Click="MenuOpen_Click" />
                     <MenuItem Header="_SendKey" Click="MenuSendKey_Click" />
@@ -19,20 +18,14 @@
                     <MenuItem Header="_Exit" Click="MenuExit_Click"/>
                 </MenuItem>
             </Menu>
-            <TextBox AcceptsReturn="True" />
-        </DockPanel>
-        <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,60,0,0">
-            <StackPanel>
+
+            <StackPanel Margin="40,40,40,40">
                 <Label Name="lbMsg" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="lpMsg" />
                 <Label Name="lbDataInfo" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Content="lpDataInfo" />
                 <DataGrid Name="gridTable" ItemsSource="{Binding}" IsReadOnly="True"></DataGrid>
             </StackPanel>
-
+        
         </Grid>
-        
-        
-        
-    </Grid>
     </ScrollViewer>
 
 </Window>
