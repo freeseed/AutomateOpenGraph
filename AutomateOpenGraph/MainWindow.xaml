@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutomateOpenGraph"
         mc:Ignorable="d"
         Title="AutomateOpenGraph" Height="650" Width="800" WindowStartupLocation="CenterScreen" >
-    <ScrollViewer VerticalScrollBarVisibility="Auto" >
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="#FFC5C5C5">
 
         <Grid >
 
@@ -19,9 +19,9 @@
                 </MenuItem>
             </Menu>
 
-            <StackPanel Margin="40,40,40,40">
-                <Label Name="lbMsg" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="lpMsg" />
-                <Label Name="lbDataInfo" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Content="lpDataInfo" />
+            <StackPanel Margin="50,50,50,50">
+                <Label Name="lbMsg" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="lbMsg" />
+                <Label Name="lbDataInfo" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Content="lbDataInfo" />
                 <DataGrid Name="gridTable" ItemsSource="{Binding}" IsReadOnly="True"></DataGrid>
             </StackPanel>
         

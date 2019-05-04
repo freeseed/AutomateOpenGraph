@@ -102,6 +102,10 @@ namespace AutomateOpenGraph
             {
                 lines = System.IO.File.ReadAllLines(openFileDialog.FileName);
             }
+            else
+            {
+                return;
+            }
 
             char[] charSeparators = new char[] { '\t' };
 
