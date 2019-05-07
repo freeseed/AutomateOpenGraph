@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -40,8 +41,11 @@ namespace AutomateOpenGraph
 
             lbMsg.Content = "Open file .xls to see data and Send Keys";
             lbDataInfo.Content = "Data is empty";
+            lbStatus.Content = "Last Sent : -";
 
-            gridTable.DataContext = stockDataList;
+            gridTable.ItemsSource = stockDataList;
+            //gridTable.DataContext = stockDataList;
+
 
         }
 
@@ -67,6 +71,7 @@ namespace AutomateOpenGraph
                     StockInfo s = (StockInfo)gridTable.SelectedItem;
                     send_keys(s.StockName);
                     lbMsg.Content = lbMsg.Content + " " + s.StockName + " sent.";
+                    lbStatus.Content = "Last Sent : " + s.StockName + " (" + (gridTable.SelectedIndex+1).ToString() + "/" + gridTable.Items.Count.ToString() + ") View Time : " + SecondsToString(secondCount) ;
                     if (gridTable.SelectedIndex == gridTable.Items.Count-1)
                     {
                         timer.Stop();
@@ -94,10 +99,13 @@ namespace AutomateOpenGraph
         private void MenuOpen_Click(object sender, RoutedEventArgs e)
         {
             string[] lines = { "" };
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Excel Tab Separated Fields (*.xls)|*.xls|Text File (*.txt)|*.txt";
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Tab Separated Field Excel (*.xls)|*.xls|Text File (*.txt)|*.txt",
+                InitialDirectory = AppDomain.CurrentDomain.BaseDirectory
+            };
             //openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            openFileDialog.InitialDirectory = @"C:\Users\nevada\source\repos\AutomateOpenGraph";
+            //openFileDialog.InitialDirectory = @"C:\Users\nevada\source\repos\AutomateOpenGraph";
             if (openFileDialog.ShowDialog() == true)
             {
                 lines = System.IO.File.ReadAllLines(openFileDialog.FileName);
@@ -110,25 +118,33 @@ namespace AutomateOpenGraph
             char[] charSeparators = new char[] { '\t' };
 
             stockDataList.Clear();
+            decimal tmpresult;
+            int Id = 0;
 
             for (int i=1; i<lines.Length-1;i++)
             {
                 string line = lines[i];
                 StockInfo s = new StockInfo();
                 string[] token = line.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
-                s.StockName = token[0].Trim();
-                s.ChangePercent = Convert.ToDecimal(token[1]);
-                s.ClosedPrice = Convert.ToDecimal(token[2]);
 
-                stockDataList.Add(s);
+                if (!Regex.IsMatch(token[0], @"-[Ff]")){
+                    Id++;
+                    s.Id = Id;
+                    s.StockName = token[0].Trim();
+                    s.ChangePercent = decimal.TryParse(token[1], out tmpresult) ? tmpresult : 0;
+                    s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
+                    stockDataList.Add(s);
+                }
+
             }
 
             stockDataList = stockDataList.OrderBy(o => o.ChangePercent).ToList();
 
-            gridTable.DataContext = stockDataList;
+            // to notify stockDataList is change.
+            gridTable.ItemsSource = stockDataList;
+            //gridTable.DataContext = stockDataList;
+
             int itemCount = gridTable.Items.Count;
-            int minutes = (itemCount * refreshInt) / 60;
-            int seconds = (itemCount * refreshInt) % 60;
             if (itemCount > 0)
             {
                 lbMsg.Content = itemCount.ToString() + " records. Next Send Keys";
@@ -137,19 +153,28 @@ namespace AutomateOpenGraph
             {
                 lbMsg.Content = "File has no record. Please select new file";
             }
-            lbDataInfo.Content = "Total Record is " + itemCount.ToString() + "  ( " + minutes.ToString() + " minutes and " + seconds.ToString() + " seconds to view )";
+            secondCount = 0;
+            lbDataInfo.Content = "Total Record is " + itemCount.ToString() + " records  ( " + SecondsToString(itemCount * refreshInt) + " to view )";
+            lbStatus.Content = "Last Sent : -";
 
 
         }
 
-        private void MenuSendKey_Click(object sender, RoutedEventArgs e)
+        private string SecondsToString(int sec)
+        {
+            int minutes = sec / 60;
+            int seconds = sec % 60;
+            return minutes.ToString() + " minutes and " + seconds.ToString() + " seconds";
+        }
+
+        private void MenuStart_Click(object sender, RoutedEventArgs e)
         {
             if (gridTable.Items.Count > 0)
             {
                 lbMsg.Content = "0";
                 timer.Start();
                 gridTable.SelectedIndex = -1;
-
+                secondCount = 0;
             }
             else
             {
@@ -160,6 +185,17 @@ namespace AutomateOpenGraph
         private void MenuExit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void MenuStop_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
+            lbMsg.Content = lbMsg.Content + " Stoped";
+        }
+
+        private void MenuResume_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Start();
         }
     }
 }

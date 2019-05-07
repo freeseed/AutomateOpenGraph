@@ -6,14 +6,16 @@
         xmlns:local="clr-namespace:AutomateOpenGraph"
         mc:Ignorable="d"
         Title="AutomateOpenGraph" Height="650" Width="800" WindowStartupLocation="CenterScreen" >
-    <ScrollViewer VerticalScrollBarVisibility="Auto" Background="#FFC5C5C5">
 
-        <Grid >
+    <ScrollViewer VerticalScrollBarVisibility="Auto" >
+        <Grid Background="#FFC5C5C5">
 
             <Menu  VerticalAlignment = "Top" >
                 <MenuItem Header="_File">
                     <MenuItem Header="_Open" Click="MenuOpen_Click" />
-                    <MenuItem Header="_SendKey" Click="MenuSendKey_Click" />
+                    <MenuItem Header="_Start" Click="MenuStart_Click" />
+                    <MenuItem Header="S_top" Click="MenuStop_Click" />
+                    <MenuItem Header="_Resume" Click="MenuResume_Click" />
                     <Separator />
                     <MenuItem Header="_Exit" Click="MenuExit_Click"/>
                 </MenuItem>
@@ -21,9 +23,20 @@
 
             <StackPanel Margin="50,50,50,50">
                 <Label Name="lbMsg" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="lbMsg" />
+                <Label Name="lbStatus" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Last Sent : " />
                 <Label Name="lbDataInfo" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Content="lbDataInfo" />
-                <DataGrid Name="gridTable" ItemsSource="{Binding}" IsReadOnly="True"></DataGrid>
-            </StackPanel>
+
+                <DataGrid Name="gridTable"  AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="Stock Name" Binding="{Binding StockName}"  />
+                        <DataGridTextColumn Header="% Change" Binding="{Binding ChangePercent, StringFormat={}{0:#,##0.00}}" />
+                        <DataGridTextColumn Header="Closed Price" Binding="{Binding ClosedPrice, StringFormat={}{0:#,##0.00}}" />
+                        
+                    </DataGrid.Columns>
+                </DataGrid>
+
+        </StackPanel>
         
         </Grid>
     </ScrollViewer>
