@@ -96,7 +96,7 @@ namespace AutomateOpenGraph
         }
 
 
-        private void MenuOpen_Click(object sender, RoutedEventArgs e)
+        private void Command_Open()
         {
             string[] lines = { "" };
             OpenFileDialog openFileDialog = new OpenFileDialog
@@ -127,7 +127,8 @@ namespace AutomateOpenGraph
                 StockInfo s = new StockInfo();
                 string[] token = line.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
 
-                if (!Regex.IsMatch(token[0], @"-[Ff]")){
+                if (!Regex.IsMatch(token[0], @"-[Ff]") && !Regex.IsMatch(token[0], @"REIT") && !Regex.IsMatch(token[0], @"\d\d\d\d\w"))
+                {
                     Id++;
                     s.Id = Id;
                     s.StockName = token[0].Trim();
@@ -153,6 +154,7 @@ namespace AutomateOpenGraph
             {
                 lbMsg.Content = "File has no record. Please select new file";
             }
+            timer.Stop();
             secondCount = 0;
             lbDataInfo.Content = "Total Record is " + itemCount.ToString() + " records  ( " + SecondsToString(itemCount * refreshInt) + " to view )";
             lbStatus.Content = "Last Sent : -";
@@ -167,7 +169,7 @@ namespace AutomateOpenGraph
             return minutes.ToString() + " minutes and " + seconds.ToString() + " seconds";
         }
 
-        private void MenuStart_Click(object sender, RoutedEventArgs e)
+        private void Command_Start()
         {
             if (gridTable.Items.Count > 0)
             {
@@ -187,15 +189,83 @@ namespace AutomateOpenGraph
             Application.Current.Shutdown();
         }
 
-        private void MenuStop_Click(object sender, RoutedEventArgs e)
+        private void Command_Stop()
         {
             timer.Stop();
             lbMsg.Content = lbMsg.Content + " Stoped";
         }
 
-        private void MenuResume_Click(object sender, RoutedEventArgs e)
+        private void Command_Resume()
         {
             timer.Start();
+        }
+
+        private void OpenCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Command_Open();
+        }
+
+        private void OpenCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (timer != null)
+            {
+                e.CanExecute = (!timer.IsEnabled) ? true : false;
+            }
+            else
+            {
+                e.CanExecute = false;
+            }
+        }
+
+        private void StartCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Command_Start();
+        }
+
+        private void StartCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (timer != null && gridTable != null)
+            {
+                e.CanExecute = (!timer.IsEnabled  && gridTable.Items.Count > 0) ? true : false;
+            }else
+            {
+                e.CanExecute = false;
+            }
+            
+        }
+
+        private void StopCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Command_Stop();
+        }
+
+        private void StopCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (timer != null)
+            {
+                e.CanExecute = (timer.IsEnabled) ? true : false;
+            }else
+            {
+                e.CanExecute = false;
+            }
+            
+        }
+
+        private void ResumeCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Command_Resume();
+        }
+
+        private void ResumeCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (timer != null && gridTable != null)
+            {
+                e.CanExecute = (!timer.IsEnabled && gridTable.Items.Count > 0) ? true : false;
+            }else
+            {
+                e.CanExecute = false;
+            }
+            
         }
     }
 }
