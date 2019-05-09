@@ -44,7 +44,6 @@ namespace AutomateOpenGraph
             lbStatus.Content = "Last Sent : -";
 
             gridTable.ItemsSource = stockDataList;
-            //gridTable.DataContext = stockDataList;
 
 
         }
@@ -78,6 +77,8 @@ namespace AutomateOpenGraph
                         lbMsg.Content = "Completed";
                         secondCount = 0;
                     }
+                    gridTable.ScrollIntoView(s);
+                    
 
                 }
 
@@ -126,12 +127,14 @@ namespace AutomateOpenGraph
                 string line = lines[i];
                 StockInfo s = new StockInfo();
                 string[] token = line.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
-
-                if (!Regex.IsMatch(token[0], @"-[Ff]") && !Regex.IsMatch(token[0], @"REIT") && !Regex.IsMatch(token[0], @"\d\d\d\d\w"))
+                token[0] = token[0].Trim();
+                token[1] = token[1].Trim();
+                token[2] = token[2].Trim();
+                if (!Regex.IsMatch(token[0], @"-[Ff]") && !Regex.IsMatch(token[0], @"REIT$") && !Regex.IsMatch(token[0], @"\d\d\d\d\w") && !Regex.IsMatch(token[0], @"IF$") && !Regex.IsMatch(token[0], @"PF$") && !Regex.IsMatch(token[0], @"IF$") && !Regex.IsMatch(token[0], @"RT$"))
                 {
                     Id++;
                     s.Id = Id;
-                    s.StockName = token[0].Trim();
+                    s.StockName = token[0];
                     s.ChangePercent = decimal.TryParse(token[1], out tmpresult) ? tmpresult : 0;
                     s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
                     stockDataList.Add(s);
@@ -139,11 +142,10 @@ namespace AutomateOpenGraph
 
             }
 
-            stockDataList = stockDataList.OrderBy(o => o.ChangePercent).ToList();
+            stockDataList = stockDataList.OrderByDescending(o => o.ChangePercent).ToList();
 
             // to notify stockDataList is change.
             gridTable.ItemsSource = stockDataList;
-            //gridTable.DataContext = stockDataList;
 
             int itemCount = gridTable.Items.Count;
             if (itemCount > 0)
@@ -184,10 +186,6 @@ namespace AutomateOpenGraph
             }
         }
 
-        private void MenuExit_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
 
         private void Command_Stop()
         {
@@ -198,6 +196,28 @@ namespace AutomateOpenGraph
         private void Command_Resume()
         {
             timer.Start();
+        }
+
+        private void Command_Find()
+        {
+            if (txtSearch.Text.Trim() != "" && gridTable.Items.Count > 0)
+            {
+                StockInfo s = stockDataList.Find(o => o.StockName == txtSearch.Text.ToUpper());
+                if (s != null)
+                {
+                   
+                    lbMsg.Content = "Found '" + txtSearch.Text.ToUpper() + "'";
+                    gridTable.ScrollIntoView(s);
+                    gridTable.SelectedItem = s;
+
+                } else
+                {
+                    lbMsg.Content = "Cannot found '" + txtSearch.Text.ToUpper() + "'";
+                }
+                
+            }
+            
+
         }
 
         private void OpenCommand_Executed(object sender, ExecutedRoutedEventArgs e)
@@ -266,6 +286,33 @@ namespace AutomateOpenGraph
                 e.CanExecute = false;
             }
             
+        }
+
+        private void FindCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Command_Find();
+        }
+
+        private void FindCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (timer != null && gridTable != null)
+            {
+                e.CanExecute = (!timer.IsEnabled && gridTable.Items.Count > 0) ? true : false;
+            }
+            else
+            {
+                e.CanExecute = false;
+            }
+
+        }
+
+        private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                Command_Find();
+            }
+
         }
     }
 }
