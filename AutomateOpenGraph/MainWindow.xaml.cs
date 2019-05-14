@@ -130,7 +130,7 @@ namespace AutomateOpenGraph
                 token[0] = token[0].Trim();
                 token[1] = token[1].Trim();
                 token[2] = token[2].Trim();
-                if (!Regex.IsMatch(token[0], @"-[Ff]") && !Regex.IsMatch(token[0], @"REIT$") && !Regex.IsMatch(token[0], @"\d\d\d\d\w") && !Regex.IsMatch(token[0], @"IF$") && !Regex.IsMatch(token[0], @"PF$") && !Regex.IsMatch(token[0], @"IF$") && !Regex.IsMatch(token[0], @"RT$"))
+                if (!Regex.IsMatch(token[0], @"-[Ff]") && !Regex.IsMatch(token[0], @"REIT$") && !Regex.IsMatch(token[0], @"\d\d\d") && !Regex.IsMatch(token[0], @"IF$") && !Regex.IsMatch(token[0], @"PF$") && !Regex.IsMatch(token[0], @"GF$") && !Regex.IsMatch(token[0], @"RT$"))
                 {
                     Id++;
                     s.Id = Id;
