@@ -31,6 +31,7 @@ namespace AutomateOpenGraph
         private const int refreshInt = 5;
         // data ignore list as of 16-May-2019
         private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT", "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART" };
+        private string[] set100Arr = { "AAV", "ADVANC", "AEONTS", "AMATA", "ANAN", "AOT", "AP", "BANPU", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEAUTY", "BEM", "BGRIM", "BH", "BJC", "BLAND", "BPP", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "GLOW", "GOLD", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MBK", "MEGA", "MINT", "MTC", "ORI", "PLANB", "PRM", "PSH", "PSL", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "ROBINS", "RS", "SAWAD", "SCB", "SCC", "SGP", "SIRI", "SPALI", "SPRC", "STA", "STEC", "SUPER", "TASCO", "TCAP", "THAI", "THANI", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TRUE", "TTW", "TU", "TVO", "WHA", "WHAUP", "WORK" };
 
         public MainWindow()
         {
@@ -45,6 +46,8 @@ namespace AutomateOpenGraph
             lbStatus.Content = "Last Sent : -";
 
             gridTable.ItemsSource = stockDataList;
+            Array.Sort(ignoreArr);
+            Array.Sort(set100Arr);
 
         }
 
@@ -120,7 +123,7 @@ namespace AutomateOpenGraph
 
             stockDataList.Clear();
             decimal tmpresult;
-            int Id = 0;
+            bool chk = chkExcludeSet100.IsChecked == true;
 
             for (int i=1; i<lines.Length-1;i++)
             {
@@ -133,14 +136,23 @@ namespace AutomateOpenGraph
                 if (!Regex.IsMatch(token[0], @"\d\d\d") && !Regex.IsMatch(token[0], @"-F$") )
                 {
 
-                    if(!ignoreArr.Contains(token[0]) && !Regex.IsMatch(token[0], @"IF$"))
+                    if (Array.BinarySearch(ignoreArr, token[0]) < 0 && !Regex.IsMatch(token[0], @"IF$"))
                     {
-                        Id++;
-                        s.Id = Id;
+
                         s.StockName = token[0];
                         s.ChangePercent = decimal.TryParse(token[1], out tmpresult) ? tmpresult : 0;
                         s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
-                        stockDataList.Add(s);
+
+                        if ( chk )
+                        {
+                            if( Array.BinarySearch(set100Arr,token[0]) < 0) stockDataList.Add(s);
+                        }
+                        else
+                        {
+                            stockDataList.Add(s);
+                        }
+
+
                     }else
                     {
                         Console.WriteLine("Rejectd: " + token[0]);

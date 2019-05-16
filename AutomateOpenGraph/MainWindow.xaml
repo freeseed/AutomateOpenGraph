@@ -58,6 +58,7 @@
                         </Canvas>
                     </Viewbox>
                 </Button>
+                <CheckBox Name="chkExcludeSet100" IsChecked="True" Margin="2,6,0,0">Exclude Set 100</CheckBox>
                 
             </StackPanel>
             <StackPanel Margin="50,0,50,0">

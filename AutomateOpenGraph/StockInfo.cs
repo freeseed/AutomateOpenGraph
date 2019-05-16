@@ -8,10 +8,8 @@ namespace AutomateOpenGraph
 {
     public class StockInfo
     {
-        public int Id { get; set; }
         public string StockName { get; set; }
         public decimal ChangePercent { get; set; }
         public decimal ClosedPrice { get; set; }
-
     }
 }
