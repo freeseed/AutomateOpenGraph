@@ -29,7 +29,8 @@ namespace AutomateOpenGraph
         private int secondCount = 0;
         private List<StockInfo> stockDataList = new List<StockInfo>();
         private const int refreshInt = 5;
-
+        // data ignore list as of 16-May-2019
+        private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT", "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART" };
 
         public MainWindow()
         {
@@ -44,7 +45,6 @@ namespace AutomateOpenGraph
             lbStatus.Content = "Last Sent : -";
 
             gridTable.ItemsSource = stockDataList;
-
 
         }
 
@@ -130,14 +130,22 @@ namespace AutomateOpenGraph
                 token[0] = token[0].Trim();
                 token[1] = token[1].Trim();
                 token[2] = token[2].Trim();
-                if (!Regex.IsMatch(token[0], @"-[Ff]") && !Regex.IsMatch(token[0], @"REIT$") && !Regex.IsMatch(token[0], @"\d\d\d") && !Regex.IsMatch(token[0], @"IF$") && !Regex.IsMatch(token[0], @"PF$") && !Regex.IsMatch(token[0], @"GF$") && !Regex.IsMatch(token[0], @"RT$"))
+                if (!Regex.IsMatch(token[0], @"\d\d\d") && !Regex.IsMatch(token[0], @"-F$") )
                 {
-                    Id++;
-                    s.Id = Id;
-                    s.StockName = token[0];
-                    s.ChangePercent = decimal.TryParse(token[1], out tmpresult) ? tmpresult : 0;
-                    s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
-                    stockDataList.Add(s);
+
+                    if(!ignoreArr.Contains(token[0]) && !Regex.IsMatch(token[0], @"IF$"))
+                    {
+                        Id++;
+                        s.Id = Id;
+                        s.StockName = token[0];
+                        s.ChangePercent = decimal.TryParse(token[1], out tmpresult) ? tmpresult : 0;
+                        s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
+                        stockDataList.Add(s);
+                    }else
+                    {
+                        Console.WriteLine("Rejectd: " + token[0]);
+                    }
+
                 }
 
             }
