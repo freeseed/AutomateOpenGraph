@@ -37,9 +37,11 @@ namespace AutomateOpenGraph
         {
             InitializeComponent();
 
-            timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Tick += timer_Tick;
+            timer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1)
+            };
+            timer.Tick += Timer_Tick;
 
             lbMsg.Content = "Open file .xls to see data and Send Keys";
             lbDataInfo.Content = "Data is empty";
@@ -48,10 +50,39 @@ namespace AutomateOpenGraph
             gridTable.ItemsSource = stockDataList;
             Array.Sort(ignoreArr);
             Array.Sort(set100Arr);
+            
 
         }
+        private string getTfexSeriesCode()
+        {
 
-        private void timer_Tick(object sender, EventArgs e)
+            DateTime testDate = DateTime.Parse($"2000-{DateTime.Now.ToString("MM-dd")}");
+            DateTime hDate = DateTime.Parse("2000-01-01");
+            DateTime mDate = DateTime.Parse("2000-03-27");
+            DateTime uDate = DateTime.Parse("2000-06-27");
+            DateTime zDate = DateTime.Parse("2000-09-27");
+            string symbolQuater;
+
+            if (testDate >= zDate)
+            {
+                symbolQuater = "Z";
+            }
+            else if(testDate >= uDate)
+            {
+                symbolQuater = "U";
+            }
+            else if(testDate >= mDate)
+            {
+                symbolQuater = "M";
+            }
+            else
+            {
+                symbolQuater = "H";
+            }
+            return $"S50{symbolQuater}{DateTime.Now.ToString("yy")}";
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
         {
             secondCount = secondCount + 1 ;
             int modResult = secondCount % refreshInt;
@@ -71,7 +102,7 @@ namespace AutomateOpenGraph
                 {
                     gridTable.SelectedIndex = gridTable.SelectedIndex + 1;
                     StockInfo s = (StockInfo)gridTable.SelectedItem;
-                    send_keys(s.StockName);
+                    Send_keys(s.StockName);
                     lbMsg.Content = lbMsg.Content + " " + s.StockName + " sent.";
                     lbStatus.Content = "Last Sent : " + s.StockName + " (" + (gridTable.SelectedIndex+1).ToString() + "/" + gridTable.Items.Count.ToString() + ") View Time : " + SecondsToString(secondCount) ;
                     if (gridTable.SelectedIndex == gridTable.Items.Count-1)
@@ -89,7 +120,7 @@ namespace AutomateOpenGraph
 
         }
 
-        private void send_keys(string str)
+        private void Send_keys(string str)
         {
             s.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);
             System.Threading.Thread.Sleep(500);
@@ -162,20 +193,32 @@ namespace AutomateOpenGraph
 
             }
 
-            stockDataList = stockDataList.OrderByDescending(o => o.ChangePercent).ToList();
+            int itemCount = stockDataList.Count;
 
-            // to notify stockDataList is change.
-            gridTable.ItemsSource = stockDataList;
-
-            int itemCount = gridTable.Items.Count;
             if (itemCount > 0)
             {
+                string symbolTfex = getTfexSeriesCode();
+                StockInfo tfex = new StockInfo
+                {
+                    StockName = symbolTfex,
+                    ChangePercent = 1000,
+                    ClosedPrice = 1000
+                };
+                stockDataList.Add(tfex);
+
                 lbMsg.Content = itemCount.ToString() + " records. Next Send Keys";
             }
             else
             {
                 lbMsg.Content = "File has no record. Please select new file";
             }
+
+
+            stockDataList = stockDataList.OrderByDescending(o => o.ChangePercent).ToList();
+
+            // to notify stockDataList is change.
+            gridTable.ItemsSource = stockDataList;
+
             timer.Stop();
             secondCount = 0;
             lbDataInfo.Content = "Total Record is " + itemCount.ToString() + " records  ( " + SecondsToString(itemCount * refreshInt) + " to view )";
