@@ -28,6 +28,10 @@ namespace AutomateOpenGraph
         private InputSimulator s = new InputSimulator();
         private int secondCount = 0;
         private List<StockInfo> stockDataList = new List<StockInfo>();
+        private List<StockInfo> stockDataListS100 = new List<StockInfo>();
+        private List<StockInfo> stockDataListExcludeS100 = new List<StockInfo>();
+        private List<StockInfo> curStockDataList;
+
         private const int refreshInt = 5;
         // data ignore list as of 16-May-2019
         private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT", "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART" };
@@ -53,33 +57,36 @@ namespace AutomateOpenGraph
             
 
         }
-        private string getTfexSeriesCode()
+        private string TfexSeriesCode
         {
+            get
+            {
 
-            DateTime testDate = DateTime.Parse($"2000-{DateTime.Now.ToString("MM-dd")}");
-            DateTime hDate = DateTime.Parse("2000-01-01");
-            DateTime mDate = DateTime.Parse("2000-03-27");
-            DateTime uDate = DateTime.Parse("2000-06-27");
-            DateTime zDate = DateTime.Parse("2000-09-27");
-            string symbolQuater;
+                DateTime testDate = DateTime.Parse($"2000-{DateTime.Now.ToString("MM-dd")}");
+                DateTime hDate = DateTime.Parse("2000-01-01");
+                DateTime mDate = DateTime.Parse("2000-03-27");
+                DateTime uDate = DateTime.Parse("2000-06-27");
+                DateTime zDate = DateTime.Parse("2000-09-27");
+                string symbolQuater;
 
-            if (testDate >= zDate)
-            {
-                symbolQuater = "Z";
+                if (testDate >= zDate)
+                {
+                    symbolQuater = "Z";
+                }
+                else if (testDate >= uDate)
+                {
+                    symbolQuater = "U";
+                }
+                else if (testDate >= mDate)
+                {
+                    symbolQuater = "M";
+                }
+                else
+                {
+                    symbolQuater = "H";
+                }
+                return $"S50{symbolQuater}{DateTime.Now.ToString("yy")}";
             }
-            else if(testDate >= uDate)
-            {
-                symbolQuater = "U";
-            }
-            else if(testDate >= mDate)
-            {
-                symbolQuater = "M";
-            }
-            else
-            {
-                symbolQuater = "H";
-            }
-            return $"S50{symbolQuater}{DateTime.Now.ToString("yy")}";
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -103,8 +110,8 @@ namespace AutomateOpenGraph
                     gridTable.SelectedIndex = gridTable.SelectedIndex + 1;
                     StockInfo s = (StockInfo)gridTable.SelectedItem;
                     Send_keys(s.StockName);
-                    lbMsg.Content = lbMsg.Content + " " + s.StockName + " sent.";
-                    lbStatus.Content = "Last Sent : " + s.StockName + " (" + (gridTable.SelectedIndex+1).ToString() + "/" + gridTable.Items.Count.ToString() + ") View Time : " + SecondsToString(secondCount) ;
+                    lbMsg.Content = $"{lbMsg.Content} {s.StockName} sent.";
+                    lbStatus.Content = $"Last Sent : {s.StockName} ({(gridTable.SelectedIndex+1).ToString() }/{gridTable.Items.Count.ToString()}) View Time : {SecondsToString(secondCount)}" ;
                     if (gridTable.SelectedIndex == gridTable.Items.Count-1)
                     {
                         timer.Stop();
@@ -153,78 +160,93 @@ namespace AutomateOpenGraph
             char[] charSeparators = new char[] { '\t' };
 
             stockDataList.Clear();
-            decimal tmpresult;
-            bool chk = chkExcludeSet100.IsChecked == true;
+            stockDataListS100.Clear();
+            stockDataListExcludeS100.Clear();
 
-            for (int i=1; i<lines.Length-1;i++)
+            for (int i = 1; i < lines.Length - 1; i++)
+                ProcessTextLine(lines, charSeparators, i);
+
+            AddTfexSymbol();
+
+            stockDataList = stockDataList.OrderByDescending(o => o.ChangePercent).ToList();
+            stockDataListS100 = stockDataListS100.OrderByDescending(o => o.ChangePercent).ToList();
+            stockDataListExcludeS100 = stockDataListExcludeS100.OrderByDescending(o => o.ChangePercent).ToList();
+
+            curStockDataList = stockDataList;
+            gridTable.ItemsSource = curStockDataList;
+
+            SetUIAfterRefreshStockList(curStockDataList);
+
+
+
+
+        }
+
+        private void ProcessTextLine(string[] lines, char[] charSeparators, int i)
+        {
+            string line = lines[i];
+            StockInfo s = new StockInfo();
+            string[] token = line.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+            token[0] = token[0].Trim();
+            token[1] = token[1].Trim();
+            token[2] = token[2].Trim();
+            if (!Regex.IsMatch(token[0], @"\d\d\d") && !Regex.IsMatch(token[0], @"-F$"))
             {
-                string line = lines[i];
-                StockInfo s = new StockInfo();
-                string[] token = line.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
-                token[0] = token[0].Trim();
-                token[1] = token[1].Trim();
-                token[2] = token[2].Trim();
-                if (!Regex.IsMatch(token[0], @"\d\d\d") && !Regex.IsMatch(token[0], @"-F$") )
+
+                if (Array.BinarySearch(ignoreArr, token[0]) < 0 && !Regex.IsMatch(token[0], @"IF$"))
                 {
 
-                    if (Array.BinarySearch(ignoreArr, token[0]) < 0 && !Regex.IsMatch(token[0], @"IF$"))
-                    {
+                    s.StockName = token[0];
+                    s.ChangePercent = decimal.TryParse(token[1], out decimal tmpresult) ? tmpresult : 0;
+                    s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
 
-                        s.StockName = token[0];
-                        s.ChangePercent = decimal.TryParse(token[1], out tmpresult) ? tmpresult : 0;
-                        s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
+                    stockDataList.Add(s);
+                    
+                    int inList = Array.BinarySearch(set100Arr, token[0]);
+                    if (inList >= 0) stockDataListS100.Add(s);  else stockDataListExcludeS100.Add(s);
 
-                        if ( chk )
-                        {
-                            if( Array.BinarySearch(set100Arr,token[0]) < 0) stockDataList.Add(s);
-                        }
-                        else
-                        {
-                            stockDataList.Add(s);
-                        }
-
-
-                    }else
-                    {
-                        Console.WriteLine("Rejectd: " + token[0]);
-                    }
-
+                }
+                else
+                {
+                    Console.WriteLine("Rejectd: " + token[0]);
                 }
 
             }
 
-            int itemCount = stockDataList.Count;
+        }
 
-            if (itemCount > 0)
+        private void AddTfexSymbol()
+        {
+            StockInfo tfex = CreateTfexStockInfo();
+            if (stockDataList.Count > 0) stockDataList.Add(tfex);
+            if (stockDataListS100.Count > 0) stockDataListS100.Add(tfex);
+            if (stockDataListExcludeS100.Count > 0) stockDataListExcludeS100.Add(tfex);
+        }
+
+        private StockInfo CreateTfexStockInfo()
+        {
+            string symbolTfex = TfexSeriesCode;
+            StockInfo tfex = new StockInfo
             {
-                string symbolTfex = getTfexSeriesCode();
-                StockInfo tfex = new StockInfo
-                {
-                    StockName = symbolTfex,
-                    ChangePercent = 1000,
-                    ClosedPrice = 1000
-                };
-                stockDataList.Add(tfex);
+                StockName = symbolTfex,
+                ChangePercent = 1000,
+                ClosedPrice = 1000
+            };
+            return tfex;
 
-                lbMsg.Content = itemCount.ToString() + " records. Next Send Keys";
-            }
-            else
-            {
-                lbMsg.Content = "File has no record. Please select new file";
-            }
+        }
 
+        private void SetUIAfterRefreshStockList(List<StockInfo> curStockDataList)
+        {
+            string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : "Exc Set 100";
+            mode = $"[{mode}]";
 
-            stockDataList = stockDataList.OrderByDescending(o => o.ChangePercent).ToList();
-
-            // to notify stockDataList is change.
-            gridTable.ItemsSource = stockDataList;
-
+            int itemCount = curStockDataList.Count;
+            lbMsg.Content = itemCount > 0 ? itemCount.ToString() + " records. Next Send Keys" : "File has no record. Please select new file";
             timer.Stop();
             secondCount = 0;
-            lbDataInfo.Content = "Total Record is " + itemCount.ToString() + " records  ( " + SecondsToString(itemCount * refreshInt) + " to view )";
+            lbDataInfo.Content = $"Mode {mode} : Total Record is {itemCount.ToString()} records  ( {SecondsToString(itemCount * refreshInt)} )to view )";
             lbStatus.Content = "Last Sent : -";
-
-
         }
 
         private string SecondsToString(int sec)
@@ -265,7 +287,7 @@ namespace AutomateOpenGraph
         {
             if (txtSearch.Text.Trim() != "" && gridTable.Items.Count > 0)
             {
-                StockInfo s = stockDataList.Find(o => o.StockName == txtSearch.Text.ToUpper());
+                StockInfo s = curStockDataList.Find(o => o.StockName == txtSearch.Text.ToUpper());
                 if (s != null)
                 {
                    
@@ -351,23 +373,6 @@ namespace AutomateOpenGraph
             
         }
 
-        private void FindCommand_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            Command_Find();
-        }
-
-        private void FindCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            if (timer != null && gridTable != null)
-            {
-                e.CanExecute = (!timer.IsEnabled && gridTable.Items.Count > 0) ? true : false;
-            }
-            else
-            {
-                e.CanExecute = false;
-            }
-
-        }
 
         private void TxtSearch_KeyDown(object sender, KeyEventArgs e)
         {
@@ -376,6 +381,28 @@ namespace AutomateOpenGraph
                 Command_Find();
             }
 
+        }
+
+        private void SetListToGrid(List<StockInfo> StockList)
+        {
+            curStockDataList = StockList;
+
+            gridTable.ItemsSource = StockList;
+
+            SetUIAfterRefreshStockList(StockList);
+        }
+
+        private void AllButton_Click(object sender, RoutedEventArgs e)
+        {
+            SetListToGrid(stockDataList);
+        }
+        private void Set100Button_Click(object sender, RoutedEventArgs e)
+        {
+            SetListToGrid(stockDataListS100);
+        }
+        private void ExcSet100Button_Click(object sender, RoutedEventArgs e)
+        {
+            SetListToGrid(stockDataListExcludeS100);
         }
     }
 }
