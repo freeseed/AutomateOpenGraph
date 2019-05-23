@@ -385,10 +385,10 @@ namespace AutomateOpenGraph
 
         private void SetListToGrid(List<StockInfo> StockList)
         {
+            if (timer.IsEnabled) return;
+
             curStockDataList = StockList;
-
             gridTable.ItemsSource = StockList;
-
             SetUIAfterRefreshStockList(StockList);
         }
 

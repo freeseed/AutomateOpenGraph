@@ -20,7 +20,7 @@
                 <Button  ToolTip="Open data file." Margin="2,0" Command="ApplicationCommands.Open" Background="{x:Null}" BorderBrush="{x:Null}">
                     <Viewbox Width="24" Height="24">
                         <Canvas Width="24" Height="24">
-                            <Path Data="M19,20H4C2.89,20 2,19.1 2,18V6C2,4.89 2.89,4 4,4H10L12,6H19A2,2 0 0,1 21,8H21L4,8V18L6.14,10H23.21L20.93,18.5C20.7,19.37 19.92,20 19,20Z" Fill="White" />
+                            <Path Data="M19,20H4C2.89,20 2,19.1 2,18V6C2,4.89 2.89,4 4,4H10L12,6H19A2,2 0 0,1 21,8H21L4,8V18L6.14,10H23.21L20.93,18.5C20.7,19.37 19.92,20 19,20Z" Fill="Black" />
                         </Canvas>
                     </Viewbox>
                 </Button>
@@ -28,14 +28,14 @@
                     <!--https://materialdesignicons.com/-->
                     <Viewbox Width="24" Height="24">
                         <Canvas Width="24" Height="24">
-                            <Path Data="M8,5.14V19.14L19,12.14L8,5.14Z" Fill="White" />
+                            <Path Data="M8,5.14V19.14L19,12.14L8,5.14Z" Fill="Black" />
                         </Canvas>
                     </Viewbox>
                 </Button>
                 <Button  ToolTip="Stop sending." Margin="2,0" Command="ApplicationCommands.Stop" Background="{x:Null}" BorderBrush="{x:Null}">
                     <Viewbox Width="24" Height="24">
                         <Canvas Width="24" Height="24">
-                            <Path Data="M18,18H6V6H18V18Z" Fill="White" />
+                            <Path Data="M18,18H6V6H18V18Z" Fill="Black" />
                         </Canvas>
                     </Viewbox>
                 </Button>
@@ -43,18 +43,18 @@
                 <Button  ToolTip="Resume sending." Margin="2,0" Command="ApplicationCommands.Redo" Background="{x:Null}" BorderBrush="{x:Null}">
                     <Viewbox Width="24" Height="24">
                         <Canvas Width="24" Height="24">
-                            <Path Data="M12,5V1L7,6L12,11V7A6,6 0 0,1 18,13A6,6 0 0,1 12,19A6,6 0 0,1 6,13H4A8,8 0 0,0 12,21A8,8 0 0,0 20,13A8,8 0 0,0 12,5Z" Fill="White" />
+                            <Path Data="M12,5V1L7,6L12,11V7A6,6 0 0,1 18,13A6,6 0 0,1 12,19A6,6 0 0,1 6,13H4A8,8 0 0,0 12,21A8,8 0 0,0 20,13A8,8 0 0,0 12,5Z" Fill="Black" />
                         </Canvas>
                     </Viewbox>
                 </Button>
 
-                <TextBox Name="txtSearch" Margin="2,0" Width="85" Padding="2,4,2,0" CharacterCasing="Upper" KeyDown="TxtSearch_KeyDown"  ></TextBox>
+                <TextBox FontWeight="Bold" FontSize="14"  Name="txtSearch" Margin="2,0" Width="85" Padding="2,4,2,0" CharacterCasing="Upper" KeyDown="TxtSearch_KeyDown" Text="SEARCH"  ></TextBox>
 
-                <Button  ToolTip="All" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="AllButton_Click" Content="|   All  " />
+                <Button  FontWeight="Bold" FontSize="14"  ToolTip="All" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="AllButton_Click" Content="|  All " />
 
-                <Button  ToolTip="SET 100" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Set100Button_Click" Content="| SET 100" />
+                <Button  FontWeight="Bold" FontSize="14" ToolTip="SET 100" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Set100Button_Click" Content="|  SET 100" />
 
-                <Button  ToolTip="Exc SET 100" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="ExcSet100Button_Click" Content="| Exc SET 100"/>
+                <Button  FontWeight="Bold" FontSize="14"  ToolTip="Exc SET 100" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="ExcSet100Button_Click" Content="|  Exc SET 100"/>
 
             </StackPanel>
             <StackPanel Margin="50,0,50,0">
