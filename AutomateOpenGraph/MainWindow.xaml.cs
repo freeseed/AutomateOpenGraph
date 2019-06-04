@@ -30,6 +30,7 @@ namespace AutomateOpenGraph
         private List<StockInfo> stockDataList = new List<StockInfo>();
         private List<StockInfo> stockDataListS100 = new List<StockInfo>();
         private List<StockInfo> stockDataListExcludeS100 = new List<StockInfo>();
+        private List<StockInfo> stockDataListWar = new List<StockInfo>();
         private List<StockInfo> curStockDataList;
 
         private const int refreshInt = 5;
@@ -162,6 +163,7 @@ namespace AutomateOpenGraph
             stockDataList.Clear();
             stockDataListS100.Clear();
             stockDataListExcludeS100.Clear();
+            stockDataListWar.Clear();
 
             for (int i = 1; i < lines.Length - 1; i++)
                 ProcessTextLine(lines, charSeparators, i);
@@ -171,6 +173,8 @@ namespace AutomateOpenGraph
             stockDataList = stockDataList.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListS100 = stockDataListS100.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListExcludeS100 = stockDataListExcludeS100.OrderByDescending(o => o.ChangePercent).ToList();
+            stockDataListWar = stockDataListWar.OrderByDescending(o => o.ChangePercent).ToList();
+
 
             curStockDataList = stockDataList;
             gridTable.ItemsSource = curStockDataList;
@@ -205,6 +209,8 @@ namespace AutomateOpenGraph
                     int inList = Array.BinarySearch(set100Arr, token[0]);
                     if (inList >= 0) stockDataListS100.Add(s);  else stockDataListExcludeS100.Add(s);
 
+                    if (Regex.IsMatch(token[0], @"-W")) stockDataListWar.Add(s);
+
                 }
                 else
                 {
@@ -221,6 +227,8 @@ namespace AutomateOpenGraph
             if (stockDataList.Count > 0) stockDataList.Add(tfex);
             if (stockDataListS100.Count > 0) stockDataListS100.Add(tfex);
             if (stockDataListExcludeS100.Count > 0) stockDataListExcludeS100.Add(tfex);
+            if (stockDataListWar.Count > 0) stockDataListWar.Add(tfex);
+            
         }
 
         private StockInfo CreateTfexStockInfo()
@@ -238,7 +246,7 @@ namespace AutomateOpenGraph
 
         private void SetUIAfterRefreshStockList(List<StockInfo> curStockDataList)
         {
-            string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : "Exc Set 100";
+            string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : (curStockDataList == stockDataListExcludeS100) ? "Exc Set 100" : "Warrant";
             mode = $"[{mode}]";
 
             int itemCount = curStockDataList.Count;
@@ -403,6 +411,11 @@ namespace AutomateOpenGraph
         private void ExcSet100Button_Click(object sender, RoutedEventArgs e)
         {
             SetListToGrid(stockDataListExcludeS100);
+        }
+
+        private void WarrantButton_Click(object sender, RoutedEventArgs e)
+        {
+            SetListToGrid(stockDataListWar);
         }
     }
 }
