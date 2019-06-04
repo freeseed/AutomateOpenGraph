@@ -207,9 +207,10 @@ namespace AutomateOpenGraph
                     stockDataList.Add(s);
                     
                     int inList = Array.BinarySearch(set100Arr, token[0]);
-                    if (inList >= 0) stockDataListS100.Add(s);  else stockDataListExcludeS100.Add(s);
+                    if (inList >= 0) stockDataListS100.Add(s);
+                    else if (Regex.IsMatch(token[0], @"-W")) stockDataListWar.Add(s);
+                    else stockDataListExcludeS100.Add(s);
 
-                    if (Regex.IsMatch(token[0], @"-W")) stockDataListWar.Add(s);
 
                 }
                 else
