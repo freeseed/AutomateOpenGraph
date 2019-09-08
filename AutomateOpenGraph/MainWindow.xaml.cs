@@ -117,7 +117,7 @@ namespace AutomateOpenGraph
                     gridTable.SelectedIndex = gridTable.SelectedIndex + 1;
                     StockInfo s = (StockInfo)gridTable.SelectedItem;
 
-                    if (txtBaseURL.Text == "xxx")
+                    if (txtBaseURL.Text.Trim() == "")
                         Send_keys(s.StockName);
                     else
                         Send_keys_withBaseURL(s.StockName);
