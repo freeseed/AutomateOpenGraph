@@ -35,7 +35,7 @@ namespace AutomateOpenGraph
 
         private int refreshInt = 5;
         // data ignore list as of 16-May-2019
-        private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT", "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","GLOW","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","TPIPP","BLAND","ESTAR","TRC","GENCO","NDR","U" };
+        private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT", "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","GLOW","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","TPIPP","BLAND","ESTAR","TRC","GENCO","NDR" };
         private string[] set100Arr = { "AAV", "ADVANC", "AEONTS", "AMATA", "ANAN", "AOT", "AP", "BANPU", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEAUTY", "BEM", "BGRIM", "BH", "BJC", "BLAND", "BPP", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "JAS", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MBK", "MEGA", "MINT", "MTC", "ORI", "PLANB", "PRM", "PSH", "PSL", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "ROBINS", "RS", "SAWAD", "SCB", "SCC", "SGP", "SIRI", "SPALI", "SPRC", "STA", "STEC", "SUPER", "TASCO", "TCAP", "THAI", "THANI", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TRUE", "TTW", "TU", "TVO", "WHA", "WORK","OSP","JMT"};
         //Begin 1July2019 announce 18June2019
         //SET50 remove CENTEL SPRC in OSP SAWAD 
@@ -116,7 +116,12 @@ namespace AutomateOpenGraph
                 {
                     gridTable.SelectedIndex = gridTable.SelectedIndex + 1;
                     StockInfo s = (StockInfo)gridTable.SelectedItem;
-                    Send_keys(s.StockName);
+
+                    if (txtBaseURL.Text == "xxx")
+                        Send_keys(s.StockName);
+                    else
+                        Send_keys_withBaseURL(s.StockName);
+
                     lbMsg.Content = $"{lbMsg.Content} {s.StockName} sent.";
                     lbStatus.Content = $"Last Sent : {s.StockName} ({(gridTable.SelectedIndex+1).ToString() }/{gridTable.Items.Count.ToString()}) View Time : {SecondsToString(secondCount)}" ;
                     if (gridTable.SelectedIndex == gridTable.Items.Count-1)
@@ -144,6 +149,15 @@ namespace AutomateOpenGraph
             s.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RETURN);
         }
 
+        private void Send_keys_withBaseURL(string str)
+        {
+            s.Keyboard.ModifiedKeyStroke(WindowsInput.Native.VirtualKeyCode.CONTROL, WindowsInput.Native.VirtualKeyCode.VK_L);
+            System.Threading.Thread.Sleep(500);
+
+            s.Keyboard.TextEntry(txtBaseURL.Text.Replace("xxx",str));
+            System.Threading.Thread.Sleep(500);
+            s.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.RETURN);
+        }
 
         private void Command_Open()
         {

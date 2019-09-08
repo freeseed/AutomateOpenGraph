@@ -66,6 +66,8 @@
 
             </StackPanel>
             <StackPanel Margin="50,0,50,0">
+                <Label Content="Base URL" FontSize="14" FontWeight="Black"></Label>
+                <TextBox Name="txtBaseURL" FontSize="16">https://www.set.or.th/set/companyhighlight.do?symbol=xxx&amp;ssoPageId=5&amp;language=th&amp;country=TH</TextBox>
                 <Label Name="lbMsg" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="lbMsg" />
                 <Label Name="lbStatus" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Last Sent : " />
                 <Label Name="lbDataInfo" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Content="lbDataInfo" />
