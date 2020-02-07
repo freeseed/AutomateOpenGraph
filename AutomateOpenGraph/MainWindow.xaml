@@ -62,7 +62,7 @@
 
                 <Label FontWeight="Bold" FontSize="14"> | Delay(sec) </Label>
                 
-                <TextBox FontWeight="Bold" FontSize="14"  Name="txtDelay" Margin="2,0" Width="65" TextAlignment="Center" Padding="2,4,2,0" CharacterCasing="Upper" Text="5" TextChanged="TxtDelay_TextChanged"  />
+                <TextBox FontWeight="Bold" FontSize="14"  Name="txtDelay" Margin="2,0" Width="65" TextAlignment="Center" Padding="2,4,2,0" CharacterCasing="Upper" Text="" TextChanged="TxtDelay_TextChanged"  />
 
             </StackPanel>
             <StackPanel Margin="50,0,50,0">
