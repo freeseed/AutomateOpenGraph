@@ -54,9 +54,11 @@
 
                 <Button  FontWeight="Bold" FontSize="14"  ToolTip="All" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="AllButton_Click" Content="|  All " />
 
-                <Button  FontWeight="Bold" FontSize="14" ToolTip="SET 100" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Set100Button_Click" Content="|  SET 100" />
+                <Button  FontWeight="Bold" FontSize="14" ToolTip="SET 50" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Set50Button_Click" Content="|  SET50" />
+                
+                <Button  FontWeight="Bold" FontSize="14" ToolTip="SET 100" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Set100Button_Click" Content="|  SET100" />
 
-                <Button  FontWeight="Bold" FontSize="14"  ToolTip="Exc SET 100" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="ExcSet100Button_Click" Content="|  Exc SET 100"/>
+                <Button  FontWeight="Bold" FontSize="14"  ToolTip="Exc SET 100" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="ExcSet100Button_Click" Content="|  Exc SET100"/>
 
                 <Button  FontWeight="Bold" FontSize="14"  ToolTip="Warrant" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="WarrantButton_Click" Content="|  Warrant"/>
 

@@ -29,14 +29,16 @@ namespace AutomateOpenGraph
         private int secondCount = 0;
         private List<StockInfo> stockDataList = new List<StockInfo>();
         private List<StockInfo> stockDataListS100 = new List<StockInfo>();
+        private List<StockInfo> stockDataListS50 = new List<StockInfo>();
         private List<StockInfo> stockDataListExcludeS100 = new List<StockInfo>();
         private List<StockInfo> stockDataListWar = new List<StockInfo>();
         private List<StockInfo> curStockDataList;
 
         private int refreshInt = 6;
         // data ignore list as of 16-May-2019
-        private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT", "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","TPIPP","BLAND","ESTAR","TRC","GENCO","NDR","TVO","SUPER","SIRI","ROBINS","TTW","EASTW","MEGA","EPG" };
+        private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT", "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","TPIPP","BLAND","ESTAR","TRC","GENCO","NDR","TVO","SUPER","SIRI","ROBINS","TTW","EASTW","MEGA","EPG","DELTA" };
         private string[] set100Arr = { "AAV", "ADVANC", "AEONTS", "AMATA", "ANAN", "AOT", "AP", "BANPU", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEAUTY", "BEM", "BGRIM", "BH", "BJC", "BLAND", "BPP", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "JAS", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MBK", "MEGA", "MINT", "MTC", "ORI", "PLANB", "PRM", "PSH", "PSL", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "RS", "SAWAD", "SCB", "SCC", "SGP", "SIRI", "SPALI", "SPRC", "STA", "STEC", "SUPER", "TASCO", "TCAP", "THAI", "THANI", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TRUE", "TTW", "TU", "TVO", "WHA", "OSP","JMT","AWC","DOHOME","VGI","TQM","AU","BAM","CRC"};
+        private string[] set50Arr = { "ADVANC", "AOT", "AWC", "BANPU", "BBL", "BDMS", "BEM", "BGRIM", "BH", "BJC", "BTS", "CBG", "CPALL", "CPF", "CPN", "CRC", "DELTA", "DTAC", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KTB", "KTC", "LH", "MINT", "MTC", "OSP", "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "TCAP", "TISCO", "TMB", "TOA", "TOP", "TRUE", "TU", "VGI", "WHA", "BAM" };
         //Begin 1July2019 announce 18June2019
         //SET50 remove CENTEL SPRC in OSP SAWAD 
         //SET100 remove GOLD WHAUP WORK in JAS JMT OSP CENTEL SPRC
@@ -62,9 +64,16 @@ namespace AutomateOpenGraph
             txtDelay.Text = refreshInt.ToString();
 
             gridTable.ItemsSource = stockDataList;
-            Array.Sort(ignoreArr);
-            Array.Sort(set100Arr);
             
+            Array.Sort(ignoreArr);
+            
+            Array.Sort(set50Arr);
+
+            set100Arr = Array.FindAll(set100Arr, x => !set50Arr.Contains(x));
+
+            Array.Sort(set100Arr);
+            //set100Arr.Where(x => set50Arr.Contains(x) );
+
 
         }
         private string TfexSeriesCode
@@ -195,6 +204,7 @@ namespace AutomateOpenGraph
 
             stockDataList.Clear();
             stockDataListS100.Clear();
+            stockDataListS50.Clear();
             stockDataListExcludeS100.Clear();
             stockDataListWar.Clear();
 
@@ -205,6 +215,7 @@ namespace AutomateOpenGraph
 
             stockDataList = stockDataList.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListS100 = stockDataListS100.OrderByDescending(o => o.ChangePercent).ToList();
+            stockDataListS50 = stockDataListS50.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListExcludeS100 = stockDataListExcludeS100.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListWar = stockDataListWar.OrderByDescending(o => o.ChangePercent).ToList();
 
@@ -244,6 +255,9 @@ namespace AutomateOpenGraph
                     else if (Regex.IsMatch(token[0], @"-W")) stockDataListWar.Add(s);
                     else stockDataListExcludeS100.Add(s);
 
+                    inList = Array.BinarySearch(set50Arr, token[0]);
+                    if (inList >= 0) stockDataListS50.Add(s);
+
 
                 }
                 else
@@ -259,7 +273,7 @@ namespace AutomateOpenGraph
         {
             StockInfo tfex = CreateTfexStockInfo();
             //if (stockDataList.Count > 0) stockDataList.Add(tfex);
-            if (stockDataListS100.Count > 0) stockDataListS100.Add(tfex);
+            if (stockDataListS50.Count > 0) stockDataListS50.Add(tfex);
 
             StockInfo SET = new StockInfo
             {
@@ -268,7 +282,7 @@ namespace AutomateOpenGraph
                 ClosedPrice = 1500
             };
 
-            stockDataListS100.Add(SET);
+            stockDataListS50.Add(SET);
 
             //if (stockDataListExcludeS100.Count > 0) stockDataListExcludeS100.Add(tfex);
             //if (stockDataListWar.Count > 0) stockDataListWar.Add(tfex);
@@ -462,7 +476,10 @@ namespace AutomateOpenGraph
             SetListToGrid(stockDataListWar);
         }
 
-
+        private void Set50Button_Click(object sender, RoutedEventArgs e)
+        {
+            SetListToGrid(stockDataListS50);
+        }
 
 
         private void TxtDelay_TextChanged(object sender, TextChangedEventArgs e)
@@ -470,5 +487,7 @@ namespace AutomateOpenGraph
             refreshInt = int.TryParse(txtDelay.Text, out int tmpresult) ? tmpresult : 5;
             //Console.WriteLine("refreshInt " + refreshInt.ToString());
         }
+
+
     }
 }
