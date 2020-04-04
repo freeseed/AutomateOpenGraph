@@ -36,9 +36,13 @@ namespace AutomateOpenGraph
 
         private int refreshInt = 6;
         // data ignore list as of 16-May-2019
-        private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT", "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","TPIPP","BLAND","ESTAR","TRC","GENCO","NDR","TVO","SUPER","SIRI","ROBINS","TTW","EASTW","MEGA","EPG","DELTA" };
-        private string[] set100Arr = { "AAV", "ADVANC", "AEONTS", "AMATA", "ANAN", "AOT", "AP", "BANPU", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEAUTY", "BEM", "BGRIM", "BH", "BJC", "BLAND", "BPP", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "JAS", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MBK", "MEGA", "MINT", "MTC", "ORI", "PLANB", "PRM", "PSH", "PSL", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "RS", "SAWAD", "SCB", "SCC", "SGP", "SIRI", "SPALI", "SPRC", "STA", "STEC", "SUPER", "TASCO", "TCAP", "THAI", "THANI", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TRUE", "TTW", "TU", "TVO", "WHA", "OSP","JMT","AWC","DOHOME","VGI","TQM","AU","BAM","CRC"};
-        private string[] set50Arr = { "ADVANC", "AOT", "AWC", "BANPU", "BBL", "BDMS", "BEM", "BGRIM", "BH", "BJC", "BTS", "CBG", "CPALL", "CPF", "CPN", "CRC", "DELTA", "DTAC", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KTB", "KTC", "LH", "MINT", "MTC", "OSP", "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "TCAP", "TISCO", "TMB", "TOA", "TOP", "TRUE", "TU", "VGI", "WHA", "BAM" };
+        private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT"
+                                        , "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","BLAND","ESTAR","TRC","GENCO","NDR" };
+
+        private string[] set100Arr = { "ADVANC", "AEONTS", "AMATA", "AOT", "AP", "AWC", "BANPU", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEC", "BEM", "BGC", "BGRIM", "BH", "BJC", "BPP", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "CRC", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "JAS", "JMT"
+                                        , "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MBK", "MEGA", "MINT", "MTC", "ORI", "OSP", "PLANB", "PRM", "PSH", "PSL", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "RS", "SAWAD", "SCB", "SCC", "SGP", "SPALI", "SPRC", "STA", "STEC", "STPI", "SUPER", "TASCO", "TCAP", "THAI", "THANI", "THG", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TQM", "TRUE", "TTW", "TU", "VGI", "WHA", "X-X", "DOHOME", "AAV" };
+
+        private string[] set50Arr = { "ADVANC", "AOT", "AWC", "BANPU", "BBL", "BDMS", "BEM", "BGRIM", "BH", "BJC", "BTS", "CBG", "CPALL", "CPF", "CPN", "CRC", "DELTA", "DTAC", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KTB", "KTC", "LH", "MINT", "MTC", "OSP", "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "TCAP", "TISCO", "TMB", "TOA", "TOP", "TRUE", "TU", "VGI", "WHA", "X-X", "BAM" };
         //Begin 1July2019 announce 18June2019
         //SET50 remove CENTEL SPRC in OSP SAWAD 
         //SET100 remove GOLD WHAUP WORK in JAS JMT OSP CENTEL SPRC
@@ -65,13 +69,20 @@ namespace AutomateOpenGraph
 
             gridTable.ItemsSource = stockDataList;
             
-            Array.Sort(ignoreArr);
-            
-            Array.Sort(set50Arr);
+
 
             set100Arr = Array.FindAll(set100Arr, x => !set50Arr.Contains(x));
 
+            set50Arr = Array.FindAll(set50Arr, x => x != "X-X");
+
+            Array.Sort(ignoreArr);
+
+            Array.Sort(set50Arr);
+
             Array.Sort(set100Arr);
+
+            Console.WriteLine(set50Arr);
+
             //set100Arr.Where(x => set50Arr.Contains(x) );
 
 
@@ -211,7 +222,8 @@ namespace AutomateOpenGraph
             for (int i = 1; i < lines.Length - 1; i++)
                 ProcessTextLine(lines, charSeparators, i);
 
-            AddTfexSymbol();
+            //remove 
+            //AddTfexSymbol();
 
             stockDataList = stockDataList.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListS100 = stockDataListS100.OrderByDescending(o => o.ChangePercent).ToList();
@@ -225,7 +237,7 @@ namespace AutomateOpenGraph
 
             SetUIAfterRefreshStockList(curStockDataList);
 
-
+            CheckWhatIsMissing();
 
 
         }
@@ -240,8 +252,8 @@ namespace AutomateOpenGraph
             token[2] = token[2].Trim();
             if (!Regex.IsMatch(token[0], @"\d\d\d") && !Regex.IsMatch(token[0], @"-F$"))
             {
-
-                if (Array.BinarySearch(ignoreArr, token[0]) < 0 && !Regex.IsMatch(token[0], @"IF$"))
+                //Array.BinarySearch(ignoreArr, token[0]) < 0
+                if ( !ignoreArr.Contains(token[0]) && !Regex.IsMatch(token[0], @"IF$"))
                 {
 
                     s.StockName = token[0];
@@ -250,22 +262,50 @@ namespace AutomateOpenGraph
 
                     stockDataList.Add(s);
                     
-                    int inList = Array.BinarySearch(set100Arr, token[0]);
-                    if (inList >= 0) stockDataListS100.Add(s);
+                    if (token[0] == "TTW")
+                        Console.WriteLine("Find Advance: " + token[0]);
+
+                    //remove search by binarySearch coz array is not sorted 
+                    //int inList100 = Array.BinarySearch(set100Arr, token[0]);
+                    //int inList50 = Array.BinarySearch(set50Arr, token[0]);
+
+                    if (set100Arr.Contains(token[0])) stockDataListS100.Add(s);
+                    else if (set50Arr.Contains(token[0])) stockDataListS50.Add(s);
                     else if (Regex.IsMatch(token[0], @"-W")) stockDataListWar.Add(s);
                     else stockDataListExcludeS100.Add(s);
-
-                    inList = Array.BinarySearch(set50Arr, token[0]);
-                    if (inList >= 0) stockDataListS50.Add(s);
 
 
                 }
                 else
                 {
-                    Console.WriteLine("Rejectd: " + token[0]);
+                    //Console.WriteLine("Rejectd not to include in ALL_LIST: " + token[0]);
                 }
 
             }
+
+
+        }
+
+        private void CheckWhatIsMissing()
+        {
+
+            Array.ForEach(set100Arr, (x) =>
+            {
+                  if (!stockDataListS100.Contains(new StockInfo(x, 0, 0)))
+                    Console.WriteLine("stockDataListS100 Not Contains: " + x);
+            });
+
+            Array.ForEach(set50Arr, (x) =>
+            {
+
+                if (!stockDataListS50.Contains(new StockInfo(x, 0, 0)))
+                    Console.WriteLine("stockDataListS50 Not Contains: " + x);
+
+                // this is not work boz stockDataListS50 order by percentchange then we can not use binarysearch on stockname
+                // but now we can call binarysearch success after implement IComparable  
+                // Console.WriteLine("Index of: " + x + " is " + stockDataListS50.BinarySearch(new StockInfo(x, 0, 0)).ToString()); 
+
+            });
 
         }
 
