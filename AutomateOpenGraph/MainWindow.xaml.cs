@@ -82,6 +82,7 @@ namespace AutomateOpenGraph
             Array.Sort(set100Arr);
 
             Console.WriteLine(set50Arr);
+            
 
             //set100Arr.Where(x => set50Arr.Contains(x) );
 
@@ -262,8 +263,8 @@ namespace AutomateOpenGraph
 
                     stockDataList.Add(s);
                     
-                    if (token[0] == "TTW")
-                        Console.WriteLine("Find Advance: " + token[0]);
+                    //if (token[0] == "TTW")
+                    //    Console.WriteLine("Find Advance: " + token[0]);
 
                     //remove search by binarySearch coz array is not sorted 
                     //int inList100 = Array.BinarySearch(set100Arr, token[0]);
@@ -288,18 +289,28 @@ namespace AutomateOpenGraph
 
         private void CheckWhatIsMissing()
         {
+            txtLoadingLog.Inlines.Clear();
 
             Array.ForEach(set100Arr, (x) =>
             {
                   if (!stockDataListS100.Contains(new StockInfo(x, 0, 0)))
-                    Console.WriteLine("stockDataListS100 Not Contains: " + x);
+                   {
+                    //Console.WriteLine("stockDataListS100 not contains: " + x);
+                    txtLoadingLog.Inlines.Add("stockDataListS100 not contains: " + x + " ");
+                   }
+                    
+
             });
 
             Array.ForEach(set50Arr, (x) =>
             {
 
                 if (!stockDataListS50.Contains(new StockInfo(x, 0, 0)))
-                    Console.WriteLine("stockDataListS50 Not Contains: " + x);
+                {
+                    //Console.WriteLine("stockDataListS50 not contains: " + x);
+                    txtLoadingLog.Inlines.Add("stockDataListS100 not contains: " + x + " ");
+                }
+                    
 
                 // this is not work boz stockDataListS50 order by percentchange then we can not use binarysearch on stockname
                 // but now we can call binarysearch success after implement IComparable  
@@ -344,11 +355,11 @@ namespace AutomateOpenGraph
 
         private void SetUIAfterRefreshStockList(List<StockInfo> curStockDataList)
         {
-            string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : (curStockDataList == stockDataListExcludeS100) ? "Exc Set 100" : "Warrant";
+            string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : (curStockDataList == stockDataListS50) ? "Set 50"  : (curStockDataList == stockDataListExcludeS100) ? "Exc Set 100" : "Warrant";
             mode = $"[{mode}]";
 
             int itemCount = curStockDataList.Count;
-            lbMsg.Content = itemCount > 0 ? itemCount.ToString() + " records. Next Send Keys" : "File has no record. Please select new file";
+            lbMsg.Content = itemCount > 0 ? mode + " " + itemCount.ToString() + " records." : "File has no record. Please select new file";
             timer.Stop();
             secondCount = 0;
             lbDataInfo.Content = $"Mode {mode} : Total Record is {itemCount.ToString()} records  ( {SecondsToString(itemCount * refreshInt)} )to view )";

@@ -70,8 +70,9 @@
             <StackPanel Margin="50,0,50,0">
                 <Label Content="Base URL(xxx will be replaced with stock code)" FontSize="14" FontWeight="Black"></Label>
                 <TextBox Name="txtBaseURL" FontSize="16"></TextBox>
-                <Label Name="lbMsg" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="lbMsg" />
+                <Label Name="lbMsg" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="lbMsg" />
                 <Label Name="lbStatus" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Last Sent : " />
+                <TextBlock Name="txtLoadingLog" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="WrapWithOverflow" />
                 <Label Name="lbDataInfo" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Content="lbDataInfo" />
             </StackPanel>
 
