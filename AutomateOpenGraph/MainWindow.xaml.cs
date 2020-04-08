@@ -32,12 +32,13 @@ namespace AutomateOpenGraph
         private List<StockInfo> stockDataListS50 = new List<StockInfo>();
         private List<StockInfo> stockDataListExcludeS100 = new List<StockInfo>();
         private List<StockInfo> stockDataListWar = new List<StockInfo>();
+        private List<StockInfo> stockDataListMarket = new List<StockInfo>();
         private List<StockInfo> curStockDataList;
 
         private int refreshInt = 6;
         // data ignore list as of 16-May-2019
         private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT"
-                                        , "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","BLAND","ESTAR","TRC","GENCO","NDR" };
+                                        , "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","BLAND","ESTAR","TRC","GENCO","NDR","X-X","TOA","DELTA" };
 
         private string[] set100Arr = { "ADVANC", "AEONTS", "AMATA", "AOT", "AP", "AWC", "BANPU", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEC", "BEM", "BGC", "BGRIM", "BH", "BJC", "BPP", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "CRC", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "JAS", "JMT"
                                         , "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MBK", "MEGA", "MINT", "MTC", "ORI", "OSP", "PLANB", "PRM", "PSH", "PSL", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "RS", "SAWAD", "SCB", "SCC", "SGP", "SPALI", "SPRC", "STA", "STEC", "STPI", "SUPER", "TASCO", "TCAP", "THAI", "THANI", "THG", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TQM", "TRUE", "TTW", "TU", "VGI", "WHA", "X-X", "DOHOME", "AAV" };
@@ -82,7 +83,8 @@ namespace AutomateOpenGraph
             Array.Sort(set100Arr);
 
             Console.WriteLine(set50Arr);
-            
+
+            AddMarketSymbol();
 
             //set100Arr.Where(x => set50Arr.Contains(x) );
 
@@ -296,7 +298,7 @@ namespace AutomateOpenGraph
                   if (!stockDataListS100.Contains(new StockInfo(x, 0, 0)))
                    {
                     //Console.WriteLine("stockDataListS100 not contains: " + x);
-                    txtLoadingLog.Inlines.Add("stockDataListS100 not contains: " + x + " ");
+                    txtLoadingLog.Inlines.Add("S100 no: " + x + " ");
                    }
                     
 
@@ -308,7 +310,7 @@ namespace AutomateOpenGraph
                 if (!stockDataListS50.Contains(new StockInfo(x, 0, 0)))
                 {
                     //Console.WriteLine("stockDataListS50 not contains: " + x);
-                    txtLoadingLog.Inlines.Add("stockDataListS100 not contains: " + x + " ");
+                    txtLoadingLog.Inlines.Add("S50 no: " + x + " ");
                 }
                     
 
@@ -320,23 +322,30 @@ namespace AutomateOpenGraph
 
         }
 
-        private void AddTfexSymbol()
+        private void AddMarketSymbol()
         {
-            StockInfo tfex = CreateTfexStockInfo();
-            //if (stockDataList.Count > 0) stockDataList.Add(tfex);
-            if (stockDataListS50.Count > 0) stockDataListS50.Add(tfex);
-
             StockInfo SET = new StockInfo
             {
                 StockName = "SET",
-                ChangePercent = 1500,
-                ClosedPrice = 1500
+                ChangePercent = 1600,
+                ClosedPrice = 1600
             };
 
-            stockDataListS50.Add(SET);
+            stockDataListMarket.Add(SET);
 
-            //if (stockDataListExcludeS100.Count > 0) stockDataListExcludeS100.Add(tfex);
-            //if (stockDataListWar.Count > 0) stockDataListWar.Add(tfex);
+            StockInfo SET50 = new StockInfo
+            {
+                StockName = "SET50",
+                ChangePercent = 1050,
+                ClosedPrice = 1050
+            };
+
+            stockDataListMarket.Add(SET50);
+
+            StockInfo tfex = CreateTfexStockInfo();
+            stockDataListMarket.Add(tfex);
+
+
 
         }
 
@@ -539,6 +548,9 @@ namespace AutomateOpenGraph
             //Console.WriteLine("refreshInt " + refreshInt.ToString());
         }
 
-
+        private void MarketButton_Click(object sender, RoutedEventArgs e)
+        {
+            SetListToGrid(stockDataListMarket);
+        }
     }
 }
