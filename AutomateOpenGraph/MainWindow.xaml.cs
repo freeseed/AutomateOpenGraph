@@ -33,6 +33,8 @@ namespace AutomateOpenGraph
         private List<StockInfo> stockDataListExcludeS100 = new List<StockInfo>();
         private List<StockInfo> stockDataListWar = new List<StockInfo>();
         private List<StockInfo> stockDataListMarket = new List<StockInfo>();
+        private List<StockInfo> stockDataListS50DW = new List<StockInfo>();
+        private List<StockInfo> stockDataListAllDW = new List<StockInfo>();
         private List<StockInfo> curStockDataList;
 
         private int refreshInt = 6;
@@ -221,6 +223,8 @@ namespace AutomateOpenGraph
             stockDataListS50.Clear();
             stockDataListExcludeS100.Clear();
             stockDataListWar.Clear();
+            stockDataListS50DW.Clear();
+            stockDataListAllDW.Clear();
 
             for (int i = 1; i < lines.Length - 1; i++)
                 ProcessTextLine(lines, charSeparators, i);
@@ -233,6 +237,8 @@ namespace AutomateOpenGraph
             stockDataListS50 = stockDataListS50.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListExcludeS100 = stockDataListExcludeS100.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListWar = stockDataListWar.OrderByDescending(o => o.ChangePercent).ToList();
+            stockDataListS50DW = stockDataListS50DW.OrderByDescending(o => o.ChangePercent).ToList();
+            stockDataListAllDW = stockDataListAllDW.OrderByDescending(o => o.ChangePercent).ToList();
 
 
             curStockDataList = stockDataList;
@@ -253,7 +259,7 @@ namespace AutomateOpenGraph
             token[0] = token[0].Trim();
             token[1] = token[1].Trim();
             token[2] = token[2].Trim();
-            if (!Regex.IsMatch(token[0], @"\d\d\d") && !Regex.IsMatch(token[0], @"-F$"))
+            if ( !Regex.IsMatch(token[0], @"-F$")) //!Regex.IsMatch(token[0], @"\d\d\d") &&
             {
                 //Array.BinarySearch(ignoreArr, token[0]) < 0
                 if ( !ignoreArr.Contains(token[0]) && !Regex.IsMatch(token[0], @"IF$"))
@@ -264,7 +270,7 @@ namespace AutomateOpenGraph
                     s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
 
                     stockDataList.Add(s);
-                    
+
                     //if (token[0] == "TTW")
                     //    Console.WriteLine("Find Advance: " + token[0]);
 
@@ -275,6 +281,8 @@ namespace AutomateOpenGraph
                     if (set100Arr.Contains(token[0])) stockDataListS100.Add(s);
                     else if (set50Arr.Contains(token[0])) stockDataListS50.Add(s);
                     else if (Regex.IsMatch(token[0], @"-W")) stockDataListWar.Add(s);
+                    else if (Regex.IsMatch(token[0], @"^S50")) stockDataListS50DW.Add(s);
+                    else if (Regex.IsMatch(token[0], @"\d\d\d")) stockDataListAllDW.Add(s);
                     else stockDataListExcludeS100.Add(s);
 
 
@@ -364,7 +372,7 @@ namespace AutomateOpenGraph
 
         private void SetUIAfterRefreshStockList(List<StockInfo> curStockDataList)
         {
-            string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : (curStockDataList == stockDataListS50) ? "Set 50"  : (curStockDataList == stockDataListExcludeS100) ? "Exc Set 100" : "Warrant";
+            string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : (curStockDataList == stockDataListS50) ? "Set 50"  : (curStockDataList == stockDataListExcludeS100) ? "Exc Set 100" : (curStockDataList == stockDataListS50DW ) ? "S50DW" : (curStockDataList == stockDataListAllDW) ? "AllDW" : "Warrant";
             mode = $"[{mode}]";
 
             int itemCount = curStockDataList.Count;
@@ -541,6 +549,15 @@ namespace AutomateOpenGraph
             SetListToGrid(stockDataListS50);
         }
 
+        private void S50DWButton_Click(object sender, RoutedEventArgs e)
+        {
+            SetListToGrid(stockDataListS50DW);
+        }
+
+        private void AllDWButton_Click(object sender, RoutedEventArgs e)
+        {
+            SetListToGrid(stockDataListAllDW);
+        }
 
         private void TxtDelay_TextChanged(object sender, TextChangedEventArgs e)
         {

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutomateOpenGraph"
         mc:Ignorable="d"
-        Title="AutomateOpenGraph" Height="835" Width="800" WindowStartupLocation="CenterScreen" >
+        Title="AutomateOpenGraph" Height="835" Width="950" WindowStartupLocation="CenterScreen" >
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="OpenCommand_Executed" CanExecute="OpenCommand_CanExecute" />
         <CommandBinding Command="ApplicationCommands.Paste" Executed="StartCommand_Executed" CanExecute="StartCommand_CanExecute" />
@@ -62,7 +62,11 @@
 
                 <Button  FontWeight="Bold" FontSize="14"  ToolTip="Exc SET 100" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="ExcSet100Button_Click" Content="| Small"/>
 
-                <Button  FontWeight="Bold" FontSize="14"  ToolTip="Warrant" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="WarrantButton_Click" Content="|  War"/>
+                <Button  FontWeight="Bold" FontSize="14"  ToolTip="Warrant" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="WarrantButton_Click" Content="| War"/>
+
+                <Button  FontWeight="Bold" FontSize="14"  ToolTip="Warrant" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="S50DWButton_Click" Content="| S50DW"/>
+
+                <Button  FontWeight="Bold" FontSize="14"  ToolTip="Warrant" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="AllDWButton_Click" Content="| DW"/>
 
                 <Label FontWeight="Bold" FontSize="14"> | Delay(sec) </Label>
                 
