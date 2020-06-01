@@ -36,6 +36,7 @@ namespace AutomateOpenGraph
         private List<StockInfo> stockDataListS50DW = new List<StockInfo>();
         private List<StockInfo> stockDataListAllDW = new List<StockInfo>();
         private List<StockInfo> curStockDataList;
+        private string mode = "";
 
         private int refreshInt = 6;
         // data ignore list as of 16-May-2019
@@ -243,6 +244,7 @@ namespace AutomateOpenGraph
 
             curStockDataList = stockDataList;
             gridTable.ItemsSource = curStockDataList;
+            mode = "All";
 
             SetUIAfterRefreshStockList(curStockDataList);
 
@@ -372,7 +374,7 @@ namespace AutomateOpenGraph
 
         private void SetUIAfterRefreshStockList(List<StockInfo> curStockDataList)
         {
-            string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : (curStockDataList == stockDataListS50) ? "Set 50"  : (curStockDataList == stockDataListExcludeS100) ? "Exc Set 100" : (curStockDataList == stockDataListS50DW ) ? "S50DW" : (curStockDataList == stockDataListAllDW) ? "AllDW" : "Warrant";
+            //string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : (curStockDataList == stockDataListS50) ? "Set 50"  : (curStockDataList == stockDataListExcludeS100) ? "Exc Set 100" : (curStockDataList == stockDataListS50DW ) ? "S50DW" : (curStockDataList == stockDataListAllDW) ? "AllDW" : "Warrant";
             mode = $"[{mode}]";
 
             int itemCount = curStockDataList.Count;
@@ -528,34 +530,41 @@ namespace AutomateOpenGraph
 
         private void AllButton_Click(object sender, RoutedEventArgs e)
         {
+            mode = "All";
             SetListToGrid(stockDataList);
         }
         private void Set100Button_Click(object sender, RoutedEventArgs e)
         {
+            mode = "SET100";
             SetListToGrid(stockDataListS100);
         }
         private void ExcSet100Button_Click(object sender, RoutedEventArgs e)
         {
+            mode = "Small";
             SetListToGrid(stockDataListExcludeS100);
         }
 
         private void WarrantButton_Click(object sender, RoutedEventArgs e)
         {
+            mode = "War";
             SetListToGrid(stockDataListWar);
         }
 
         private void Set50Button_Click(object sender, RoutedEventArgs e)
         {
+            mode = "SET50";
             SetListToGrid(stockDataListS50);
         }
 
         private void S50DWButton_Click(object sender, RoutedEventArgs e)
         {
+            mode = "S50DW";
             SetListToGrid(stockDataListS50DW);
         }
 
         private void AllDWButton_Click(object sender, RoutedEventArgs e)
         {
+            mode = "DW";
             SetListToGrid(stockDataListAllDW);
         }
 
@@ -567,6 +576,7 @@ namespace AutomateOpenGraph
 
         private void MarketButton_Click(object sender, RoutedEventArgs e)
         {
+            mode = "Market";
             SetListToGrid(stockDataListMarket);
         }
     }
