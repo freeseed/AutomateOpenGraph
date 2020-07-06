@@ -11,6 +11,11 @@ namespace AutomateOpenGraph
         public string StockName { get; set; }
         public decimal ChangePercent { get; set; }
         public decimal ClosedPrice { get; set; }
+        public DateTime IPODate { get; set; }
+        public int IPOSizeML { get; set; }
+        public string SETMAI { get; set; }
+        public double IPOPrice { get; set; }
+
 
         public StockInfo()
         {
@@ -22,6 +27,16 @@ namespace AutomateOpenGraph
             this.StockName = StockName;
             this.ChangePercent = ChangePercent;
             this.ClosedPrice = ClosedPrice;
+        }
+
+        public StockInfo(string StockName, DateTime IPODate,int IPOSizeML, string SETMAI, double IPOPrice)
+        {
+            this.StockName = StockName;
+            this.IPODate = IPODate;
+            this.IPOSizeML = IPOSizeML;
+            this.SETMAI = SETMAI;
+            this.IPOPrice = IPOPrice;
+
         }
 
         //IEquatable for  contain
@@ -38,5 +53,13 @@ namespace AutomateOpenGraph
         {
             return this.StockName.CompareTo(other.StockName);
         }
+
+        public double IPOLast
+        {
+            get
+            {
+                return Math.Ceiling( DateTime.Now.Subtract(this.IPODate).TotalDays);
+            }
+        } 
     }
 }
