@@ -37,7 +37,9 @@ namespace AutomateOpenGraph
         private List<StockInfo> stockDataListS50DW = new List<StockInfo>();
         private List<StockInfo> stockDataListAllDW = new List<StockInfo>();
         private List<StockInfo> curStockDataList;
+
         private List<StockInfo> ipoList = new List<StockInfo>();
+        private List<StockInfo> ipoWarList = new List<StockInfo>();
 
         private string mode = "";
 
@@ -47,9 +49,11 @@ namespace AutomateOpenGraph
                                         , "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","BLAND","ESTAR","TRC","GENCO","NDR","X-X" };
 
         private string[] set100Arr = { "ADVANC", "AEONTS", "AMATA", "AOT", "AP", "AWC", "BANPU", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEC", "BEM", "BGRIM", "BH", "BJC", "BPP", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "CRC", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "JAS", "JMT"
-                                        , "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MEGA", "MINT", "MTC", "ORI", "OSP", "PLANB", "PRM", "PSH", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "RS", "SAWAD", "SCB", "SCC", "SGP", "SPALI", "SPRC", "STA", "STEC", "SUPER", "TASCO", "TCAP", "THANI", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TQM", "TRUE", "TTW", "TU", "VGI", "WHA", "X-X", "DOHOME", "AAV","ACE","RBF","PSL","TVO"  };
+                                        , "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MEGA", "MINT", "MTC", "ORI", "OSP", "PLANB", "PRM", "PSH", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "RS", "SAWAD", "SCB", "SCC", "SGP", "SPALI", "SPRC", "STA", "STEC", "SUPER", "TASCO", "TCAP", "THANI", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TQM", "TRUE", "TTW", "TU", "VGI", "WHA"
+                                        , "X-X", "DOHOME", "AAV","ACE","RBF","PSL","TVO"  };
 
-        private string[] set50Arr = { "ADVANC", "AOT", "AWC", "BANPU", "BBL", "BDMS", "BEM", "BGRIM", "BH", "BJC", "BTS", "CBG", "CPALL", "CPF", "CPN", "CRC", "DTAC", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KTB", "KTC", "LH", "MINT", "MTC", "OSP", "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "TCAP", "TISCO", "TMB", "TOA", "TOP", "TRUE", "TU", "VGI", "WHA", "X-X", "BAM","MAKRO","BANPU"};
+        private string[] set50Arr = { "ADVANC", "AOT", "AWC", "BANPU", "BBL", "BDMS", "BEM", "BGRIM", "BH", "BJC", "BTS", "CBG", "CPALL", "CPF", "CPN", "CRC", "DTAC", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KTB", "KTC", "LH", "MINT", "MTC", "OSP", "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "TCAP", "TISCO", "TMB", "TOA", "TOP", "TRUE", "TU", "VGI", "WHA"
+                                    , "X-X", "BAM","MAKRO","BANPU","STGT"};
         //remove banpu delta 4-jul-2020
 
         //for ipo 1 year setup
@@ -97,14 +101,13 @@ namespace AutomateOpenGraph
 
             AddMarketSymbol();
 
-            //set100Arr.Where(x => set50Arr.Contains(x) );
             CreateIPOList();
             IComparer<StockInfo> sortbyDate = new SortByDate();
-
             ipoList.Sort(sortbyDate);
 
-
-
+            CreateIPOWarList();
+            ipoWarList.Sort(sortbyDate);
+            
         }
 
         private void CreateIPOList()
@@ -149,6 +152,27 @@ namespace AutomateOpenGraph
             ipoList.Add(new StockInfo("BC", new DateTime(2019, 11, 14), 1450, "mai", 2.86));
             //ipoList.Add(new StockInfo("ARIN", new DateTime(2019, 7, 10), 1080, "mai", 1.8));
             //ipoList.Add(new StockInfo("APP", new DateTime(2019, 3, 13), 425, "mai", 1.7));
+
+
+        }
+
+        private void CreateIPOWarList()
+        {
+            ipoWarList.Add(new StockInfo("UREKA-W2", new DateTime(2020, 7, 10), 295, "SET", 1));
+            ipoWarList.Add(new StockInfo("JMART-W3", new DateTime(2020, 7, 3), 100, "SET", 11));
+            ipoWarList.Add(new StockInfo("JMART-W4", new DateTime(2020, 7, 3), 100, "SET", 15));
+            ipoWarList.Add(new StockInfo("NER-W1", new DateTime(2020, 6, 18), 307, "SET", 1.8));
+            ipoWarList.Add(new StockInfo("NEX-W2", new DateTime(2020, 6, 18), 223, "SET", 1));
+
+            ipoWarList.Add(new StockInfo("CIG-W8", new DateTime(2020, 6, 10), 432, "SET", 1));
+            ipoWarList.Add(new StockInfo("CHAYO-W1", new DateTime(2020, 6, 9), 209, "SET", 6.5));
+            ipoWarList.Add(new StockInfo("III-W1", new DateTime(2020, 5, 28), 152, "SET", 6));
+            ipoWarList.Add(new StockInfo("TAPAC-W4", new DateTime(2020, 4, 13), 205, "SET", 9));
+
+            ipoWarList.Add(new StockInfo("D-W1", new DateTime(2020, 3, 17), 40, "SET", 4));
+            ipoWarList.Add(new StockInfo("BTS-W5", new DateTime(2020, 2, 27), 1315, "SET", 14));
+            ipoWarList.Add(new StockInfo("SMART-W2", new DateTime(2019, 10, 22), 91, "SET", 1.5));
+            ipoWarList.Add(new StockInfo("B-W5", new DateTime(2019, 9, 26), 290, "SET", 0.35));
 
 
         }
@@ -644,6 +668,12 @@ namespace AutomateOpenGraph
         {
             mode = "IPO";
             SetListToGrid(ipoList);
+        }
+
+        private void IPOWarButton_Click(object sender, RoutedEventArgs e)
+        {
+            mode = "IPO War";
+            SetListToGrid(ipoWarList);
         }
     }
 }
