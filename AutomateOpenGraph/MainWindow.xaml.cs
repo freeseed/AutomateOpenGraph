@@ -48,12 +48,12 @@ namespace AutomateOpenGraph
         private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT"
                                         , "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","BLAND","ESTAR","TRC","GENCO","NDR","X-X" };
 
-        private string[] set100Arr = { "ADVANC", "AEONTS", "AMATA", "AOT", "AP", "AWC", "BANPU", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEC", "BEM", "BGRIM", "BH", "BJC", "BPP", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "CRC", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "JAS", "JMT"
+        private string[] set100Arr = { "ADVANC", "AEONTS", "AMATA", "AOT", "AP", "AWC", "BANPU", "BPP", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEC", "BEM", "BGRIM", "BH", "BJC", "BANPU", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "CRC", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "JAS", "JMT"
                                         , "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MEGA", "MINT", "MTC", "ORI", "OSP", "PLANB", "PRM", "PSH", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "RS", "SAWAD", "SCB", "SCC", "SGP", "SPALI", "SPRC", "STA", "STEC", "SUPER", "TASCO", "TCAP", "THANI", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TQM", "TRUE", "TTW", "TU", "VGI", "WHA"
                                         , "X-X", "DOHOME", "AAV","ACE","RBF","PSL","TVO"  };
 
-        private string[] set50Arr = { "ADVANC", "AOT", "AWC", "BANPU", "BBL", "BDMS", "BEM", "BGRIM", "BH", "BJC", "BTS", "CBG", "CPALL", "CPF", "CPN", "CRC", "DTAC", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KTB", "KTC", "LH", "MINT", "MTC", "OSP", "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "TCAP", "TISCO", "TMB", "TOA", "TOP", "TRUE", "TU", "VGI", "WHA"
-                                    , "X-X", "BAM","MAKRO","BANPU","STGT"};
+        private string[] set50Arr = { "ADVANC", "AOT", "AWC", "BPP", "BBL", "BDMS", "BEM", "BGRIM", "BH", "BJC", "BTS", "CBG", "CPALL", "CPF", "CPN", "CRC", "DTAC", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KTB", "KTC", "LH", "MINT", "MTC", "OSP", "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "TCAP", "TISCO", "TMB", "TOA", "TOP", "TRUE", "TU", "VGI", "WHA"
+                                    , "X-X", "BAM","MAKRO","STGT"};
         //remove banpu delta 4-jul-2020
 
         //for ipo 1 year setup
