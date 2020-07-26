@@ -116,14 +116,14 @@ namespace AutomateOpenGraph
             ipoList.Add(new StockInfo("CRC", new DateTime(2020, 2, 20), 253302, "SET", 42));
             ipoList.Add(new StockInfo("SFLEX", new DateTime(2019, 12, 19), 1590, "SET", 3.88 ));
             ipoList.Add(new StockInfo("BAM", new DateTime(2019, 12, 16), 52760, "SET", 17.5 ));
-            ipoList.Add(new StockInfo("ACE", new DateTime(2019, 12, 13),44774, "SET", 4.4));
+            ipoList.Add(new StockInfo("ACE", new DateTime(2019, 11, 13),44774, "SET", 4.4));
 
             ipoList.Add(new StockInfo("CPW", new DateTime(2019, 10, 18), 1428, "SET", 2.38));
             ipoList.Add(new StockInfo("DOHOME", new DateTime(2019, 8, 6), 14478, "SET", 7.8));
             ipoList.Add(new StockInfo("ILM", new DateTime(2019, 7, 26), 11110, "SET", 22));
             ipoList.Add(new StockInfo("RBF", new DateTime(2019, 10, 24), 6600, "SET", 3.3));
 
-            ipoList.Add(new StockInfo("SFLEX", new DateTime(2019, 1, 23), 1590, "SET", 3.88));
+            ipoList.Add(new StockInfo("AWC", new DateTime(2019, 10, 10), 185742, "SET", 6.0));
             ipoList.Add(new StockInfo("SHR", new DateTime(2019, 11, 12), 18686, "SET", 5.2));
             ipoList.Add(new StockInfo("VRANDA", new DateTime(2019, 5, 3), 3196, "SET", 10));
             ipoList.Add(new StockInfo("ZEN", new DateTime(2019, 2, 20), 3900, "SET", 13));
@@ -138,7 +138,7 @@ namespace AutomateOpenGraph
             ipoList.Add(new StockInfo("TPS", new DateTime(2019, 11, 15), 700, "mai", 2.5));
             ipoList.Add(new StockInfo("STC", new DateTime(2019, 11, 29), 568, "mai", 1));
 
-            ipoList.Add(new StockInfo("SAAM", new DateTime(2020, 1, 7), 540, "mai", 1.8));
+            ipoList.Add(new StockInfo("SAAM", new DateTime(2019, 1, 7), 540, "mai", 1.8));
             ipoList.Add(new StockInfo("MITSIB", new DateTime(2019, 6, 11), 1667, "mai", 2.5));
             ipoList.Add(new StockInfo("KUN", new DateTime(2019, 12, 17), 660, "mai", 1.1));
             ipoList.Add(new StockInfo("KUMWEL", new DateTime(2019, 8, 1), 473, "mai", 1));
@@ -148,10 +148,10 @@ namespace AutomateOpenGraph
             ipoList.Add(new StockInfo("IMH", new DateTime(2019, 12, 26), 1290, "mai", 6));
             ipoList.Add(new StockInfo("GSC", new DateTime(2019, 3, 13), 425, "mai", 1.7));
 
-            ipoList.Add(new StockInfo("CAZ", new DateTime(2019, 1, 2), 1092, "mai", 3.9));
+            ipoList.Add(new StockInfo("CAZ", new DateTime(2019, 1, 22), 1092, "mai", 3.9));
             ipoList.Add(new StockInfo("BC", new DateTime(2019, 11, 14), 1450, "mai", 2.86));
-            //ipoList.Add(new StockInfo("ARIN", new DateTime(2019, 7, 10), 1080, "mai", 1.8));
-            //ipoList.Add(new StockInfo("APP", new DateTime(2019, 3, 13), 425, "mai", 1.7));
+            //ipoList.Add(new StockInfo("XXX", new DateTime(2019, 7, 10), 1080, "mai", 1.8));
+            //ipoList.Add(new StockInfo("XXX", new DateTime(2019, 3, 13), 425, "mai", 1.7));
 
 
         }
@@ -164,7 +164,7 @@ namespace AutomateOpenGraph
             ipoWarList.Add(new StockInfo("NER-W1", new DateTime(2020, 6, 18), 307, "SET", 1.8));
             ipoWarList.Add(new StockInfo("NEX-W2", new DateTime(2020, 6, 18), 223, "SET", 1));
 
-            ipoWarList.Add(new StockInfo("CIG-W8", new DateTime(2020, 6, 10), 432, "SET", 1));
+            //ipoWarList.Add(new StockInfo("CIG-W8", new DateTime(2020, 6, 10), 432, "SET", 1));
             ipoWarList.Add(new StockInfo("CHAYO-W1", new DateTime(2020, 6, 9), 209, "SET", 6.5));
             ipoWarList.Add(new StockInfo("III-W1", new DateTime(2020, 5, 28), 152, "SET", 6));
             ipoWarList.Add(new StockInfo("TAPAC-W4", new DateTime(2020, 4, 13), 205, "SET", 9));
