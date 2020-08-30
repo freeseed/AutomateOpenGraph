@@ -36,6 +36,7 @@ namespace AutomateOpenGraph
         private List<StockInfo> stockDataListMarket = new List<StockInfo>();
         private List<StockInfo> stockDataListS50DW = new List<StockInfo>();
         private List<StockInfo> stockDataListAllDW = new List<StockInfo>();
+        private List<StockInfo> stockDataListCustom = new List<StockInfo>();
         private List<StockInfo> curStockDataList;
 
         private List<StockInfo> ipoList = new List<StockInfo>();
@@ -45,32 +46,23 @@ namespace AutomateOpenGraph
 
         private int refreshInt = 6;
         // data ignore list as of 16-May-2019
-        private string[] ignoreArr = { "AIMIRT", "AMATAR", "B-WORK", "BKKCP", "BOFFICE", "CPNCG", "CPNREIT", "CPTGF", "CRYSTAL", "CTARAF", "DREIT", "ERWPF", "FTREIT", "FUTUREPF", "GAHREIT", "GLANDRT", "GOLDPF", "GVREIT", "HPF", "HREIT", "IMPACT", "KPNPF", "LHHOTEL", "LHPF", "LHSC", "LUXF", "M-II", "M-PAT", "M-STOR", "MIPF", "MIT", "MJLF", "MNIT", "MNIT2", "MNRF", "MONTRI", "POPF", "PPF", "QHHR", "QHOP", "QHPF", "SBPF", "SHREIT"
-                                        , "SIRIP", "SPF", "SPRIME", "SRIPANWA", "SSPF", "SSTRT", "TIF1", "TLGF", "TLHPF", "TNPF", "TPRIME", "TTLPF", "TU-PF", "URBNPF", "WHABT", "WHART", "AIMCG", "GOLD","LHFG","THE","EVER","AJA","NWR","DTC","PLE","TRITN","PACE","PREB","BA","BLAND","ESTAR","TRC","GENCO","NDR","X-X" };
+        private string[] ignoreArr = { };
+        private string[] set100Arr = { };
+        private string[] set50Arr = { };
+        private string[] customArr = { };
 
-        private string[] set100Arr = { "ADVANC", "AEONTS", "AMATA", "AOT", "AP", "AWC", "BANPU", "BPP", "BBL", "BCH", "BCP", "BCPG", "BDMS", "BEC", "BEM", "BGRIM", "BH", "BJC", "BANPU", "BTS", "CBG", "CENTEL", "CHG", "CK", "CKP", "COM7", "CPALL", "CPF", "CPN", "CRC", "DELTA", "DTAC", "EA", "EGCO", "EPG", "ERW", "ESSO", "GFPT", "GLOBAL", "GPSC", "GULF", "GUNKUL", "HANA", "HMPRO", "INTUCH", "IRPC", "IVL", "JAS", "JMT"
-                                        , "KBANK", "KCE", "KKP", "KTB", "KTC", "LH", "MAJOR", "MEGA", "MINT", "MTC", "ORI", "OSP", "PLANB", "PRM", "PSH", "PTG", "PTT", "PTTEP", "PTTGC", "QH", "RATCH", "RS", "SAWAD", "SCB", "SCC", "SGP", "SPALI", "SPRC", "STA", "STEC", "SUPER", "TASCO", "TCAP", "THANI", "TISCO", "TKN", "TMB", "TOA", "TOP", "TPIPP", "TQM", "TRUE", "TTW", "TU", "VGI", "WHA"
-                                        , "X-X", "DOHOME", "AAV","ACE","RBF","PSL","TVO"  };
 
-        private string[] set50Arr = { "ADVANC", "AOT", "AWC", "BPP", "BBL", "BDMS", "BEM", "BGRIM", "BH", "BJC", "BTS", "CBG", "CPALL", "CPF", "CPN", "CRC", "DTAC", "EA", "EGCO", "GLOBAL", "GPSC", "GULF", "HMPRO", "INTUCH", "IRPC", "IVL", "KBANK", "KTB", "KTC", "LH", "MINT", "MTC", "OSP", "PTT", "PTTEP", "PTTGC", "RATCH", "SAWAD", "SCB", "SCC", "TCAP", "TISCO", "TMB", "TOA", "TOP", "TRUE", "TU", "VGI", "WHA"
-                                    , "X-X", "BAM","MAKRO","STGT"};
-        //remove banpu delta 4-jul-2020
-
-        //for ipo 1 year setup
-        //private string[] ipoArr = { "STGT","CRC","SFLEX","BAM","ACE" };
-
-        //Begin 1July2019 announce 18June2019
-        //SET50 remove CENTEL SPRC in OSP SAWAD 
-        //SET100 remove GOLD WHAUP WORK in JAS JMT OSP CENTEL SPRC
-        //manual add to ignore GOLD GLOW THE LHFG
-        //Adhoc add AWC remove KKP 16-Oct-2019
-        //manual add DOHOME, RBF, VGI, TQM, AU  to set100 30-Oct-2019
-
+        private void RemoveSpace(string[] x)
+        {
+            for (int i=0; i < x.Length; i++)
+                x[i] = x[i].Trim();
+        }
 
         public MainWindow()
         {
             InitializeComponent();
 
+            this.Title = this.Title + " - Debug";
             timer = new DispatcherTimer
             {
                 Interval = TimeSpan.FromSeconds(1)
@@ -84,8 +76,23 @@ namespace AutomateOpenGraph
             txtDelay.Text = refreshInt.ToString();
 
             gridTable.ItemsSource = stockDataList;
-            
 
+            string strSET50Setting = Properties.Settings.Default.set50;
+            string strSET100Setting = Properties.Settings.Default.set100;
+            string strDelaySecond = Properties.Settings.Default.delaysec;
+            string strCustomList = Properties.Settings.Default.customlist;
+
+            char[] sep = new char[] { ',' };
+            set50Arr = strSET50Setting.Split(sep);
+            RemoveSpace(set50Arr);
+
+            set100Arr = strSET100Setting.Split(sep);
+            RemoveSpace(set100Arr);
+
+            customArr = strCustomList.Split(sep);
+            RemoveSpace(customArr);
+
+            refreshInt = int.TryParse(strDelaySecond, out int tmpresult) ? tmpresult : 6;  //int.Parse(strDelaySecond);
 
             set100Arr = Array.FindAll(set100Arr, x => !set50Arr.Contains(x));
 
@@ -96,6 +103,8 @@ namespace AutomateOpenGraph
             Array.Sort(set50Arr);
 
             Array.Sort(set100Arr);
+
+            Array.Sort(customArr);
 
             Console.WriteLine(set50Arr);
 
@@ -112,6 +121,9 @@ namespace AutomateOpenGraph
 
         private void CreateIPOList()
         {
+            ipoList.Add(new StockInfo("ETC", new DateTime(2020, 8, 18), 5824, "mai", 2.6));  // มุกเดิม pe 85 แต่ทำ eps มา เอาแบบสูงสุดที่เคยมี 
+            ipoList.Add(new StockInfo("IIG", new DateTime(2020, 8, 6), 552, "mai", 6.6));  // มุกเดิม pe 12 แต่ทำ eps มา พึคมาก 
+            ipoList.Add(new StockInfo("SICT", new DateTime(2020, 7, 30), 552, "mai", 1.38));
             ipoList.Add(new StockInfo("STGT", new DateTime(2020, 7, 2), 48578, "SET", 34 ));
             ipoList.Add(new StockInfo("CRC", new DateTime(2020, 2, 20), 253302, "SET", 42));
             ipoList.Add(new StockInfo("SFLEX", new DateTime(2019, 12, 19), 1590, "SET", 3.88 ));
@@ -158,6 +170,9 @@ namespace AutomateOpenGraph
 
         private void CreateIPOWarList()
         {
+            ipoWarList.Add(new StockInfo("ALL-W1", new DateTime(2020, 8, 28), 140, "mai", 2.8));
+            ipoWarList.Add(new StockInfo("ITEL-W2", new DateTime(2020, 8, 27), 250, "mai", 3.00));
+            ipoWarList.Add(new StockInfo("MINT-W7", new DateTime(2020, 8, 26), 235, "SET", 21.6));
             ipoWarList.Add(new StockInfo("UREKA-W2", new DateTime(2020, 7, 10), 295, "SET", 1));
             ipoWarList.Add(new StockInfo("JMART-W3", new DateTime(2020, 7, 3), 100, "SET", 11));
             ipoWarList.Add(new StockInfo("JMART-W4", new DateTime(2020, 7, 3), 100, "SET", 15));
@@ -310,6 +325,7 @@ namespace AutomateOpenGraph
             stockDataListWar.Clear();
             stockDataListS50DW.Clear();
             stockDataListAllDW.Clear();
+            stockDataListCustom.Clear();
 
             for (int i = 1; i < lines.Length - 1; i++)
                 ProcessTextLine(lines, charSeparators, i);
@@ -324,6 +340,7 @@ namespace AutomateOpenGraph
             stockDataListWar = stockDataListWar.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListS50DW = stockDataListS50DW.OrderByDescending(o => o.ChangePercent).ToList();
             stockDataListAllDW = stockDataListAllDW.OrderByDescending(o => o.ChangePercent).ToList();
+            stockDataListCustom = stockDataListCustom.OrderByDescending(o => o.ChangePercent).ToList();
 
 
             curStockDataList = stockDataList;
@@ -348,35 +365,32 @@ namespace AutomateOpenGraph
             if ( !Regex.IsMatch(token[0], @"-F$")) //!Regex.IsMatch(token[0], @"\d\d\d") &&
             {
                 //Array.BinarySearch(ignoreArr, token[0]) < 0
-                if ( !ignoreArr.Contains(token[0]) && !Regex.IsMatch(token[0], @"IF$"))
-                {
-
-                    s.StockName = token[0];
-                    s.ChangePercent = decimal.TryParse(token[1], out decimal tmpresult) ? tmpresult : 0;
-                    s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
-
-                    stockDataList.Add(s);
-
-                    //if (token[0] == "TTW")
-                    //    Console.WriteLine("Find Advance: " + token[0]);
-
-                    //remove search by binarySearch coz array is not sorted 
-                    //int inList100 = Array.BinarySearch(set100Arr, token[0]);
-                    //int inList50 = Array.BinarySearch(set50Arr, token[0]);
-
-                    if (set100Arr.Contains(token[0])) stockDataListS100.Add(s);
-                    else if (set50Arr.Contains(token[0])) stockDataListS50.Add(s);
-                    else if (Regex.IsMatch(token[0], @"-W")) stockDataListWar.Add(s);
-                    else if (Regex.IsMatch(token[0], @"^S50")) stockDataListS50DW.Add(s);
-                    else if (Regex.IsMatch(token[0], @"\d\d\d")) stockDataListAllDW.Add(s);
-                    else stockDataListExcludeS100.Add(s);
+                //if ( !ignoreArr.Contains(token[0]) && !Regex.IsMatch(token[0], @"IF$"))
 
 
-                }
-                else
-                {
-                    //Console.WriteLine("Rejectd not to include in ALL_LIST: " + token[0]);
-                }
+                s.StockName = token[0];
+                s.ChangePercent = decimal.TryParse(token[1], out decimal tmpresult) ? tmpresult : 0;
+                s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
+
+                stockDataList.Add(s);
+
+                //if (token[0] == "ALL-W1")
+                //    Console.WriteLine("Find Advance: " + token[0]);
+
+                //remove search by binarySearch coz array is not sorted 
+                //int inList100 = Array.BinarySearch(set100Arr, token[0]);
+                //int inList50 = Array.BinarySearch(set50Arr, token[0]);
+
+                if (set100Arr.Contains(token[0])) stockDataListS100.Add(s);
+                else if (set50Arr.Contains(token[0])) stockDataListS50.Add(s);
+                else if (Regex.IsMatch(token[0], @"-W")) stockDataListWar.Add(s);
+                else if (Regex.IsMatch(token[0], @"^S50")) stockDataListS50DW.Add(s);
+                else if (Regex.IsMatch(token[0], @"\d\d\d")) stockDataListAllDW.Add(s);
+                else stockDataListExcludeS100.Add(s);
+
+                if (customArr.Contains(token[0]))
+                    stockDataListCustom.Add(s);
+
 
             }
 
@@ -440,6 +454,14 @@ namespace AutomateOpenGraph
             stockDataListMarket.Add(tfex);
 
 
+            StockInfo MAI = new StockInfo
+            {
+                StockName = "MAI",
+                ChangePercent = 200,
+                ClosedPrice = 200
+            };
+
+            stockDataListMarket.Add(MAI);
 
         }
 
@@ -458,7 +480,6 @@ namespace AutomateOpenGraph
 
         private void SetUIAfterRefreshStockList(List<StockInfo> curStockDataList)
         {
-            //string mode = (curStockDataList == stockDataList) ? "All" : (curStockDataList == stockDataListS100) ? "Set 100" : (curStockDataList == stockDataListS50) ? "Set 50"  : (curStockDataList == stockDataListExcludeS100) ? "Exc Set 100" : (curStockDataList == stockDataListS50DW ) ? "S50DW" : (curStockDataList == stockDataListAllDW) ? "AllDW" : "Warrant";
             mode = $"[{mode}]";
 
             int itemCount = curStockDataList.Count;
@@ -654,7 +675,7 @@ namespace AutomateOpenGraph
 
         private void TxtDelay_TextChanged(object sender, TextChangedEventArgs e)
         {
-            refreshInt = int.TryParse(txtDelay.Text, out int tmpresult) ? tmpresult : 5;
+            refreshInt = int.TryParse(txtDelay.Text, out int tmpresult) ? tmpresult : 6;
             //Console.WriteLine("refreshInt " + refreshInt.ToString());
         }
 
@@ -674,6 +695,13 @@ namespace AutomateOpenGraph
         {
             mode = "IPO War";
             SetListToGrid(ipoWarList);
+        }
+
+        //CustomButton_Click
+        private void CustomButton_Click(object sender, RoutedEventArgs e)
+        {
+            mode = "Custom";
+            SetListToGrid(stockDataListCustom);
         }
     }
 }

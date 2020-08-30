@@ -8,22 +8,69 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AutomateOpenGraph.Properties
-{
-
-
+namespace AutomateOpenGraph.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ADVANC,AOT,AWC,BPP,BBL,BDMS,BEM,BGRIM,BH,BJC,BTS,CBG,CPALL,CPF,CPN,CRC,DTAC,EA,EG" +
+            "CO,GLOBAL,GPSC,GULF,HMPRO,INTUCH,IRPC,IVL,KBANK,KTB,KTC,LH,MINT,MTC,OSP,PTT,PTTE" +
+            "P,PTTGC,RATCH,SAWAD,SCB,SCC,TCAP,TISCO,TMB,TOA,TOP,TRUE,TU,VGI,WHA,X-X,BAM,MAKRO" +
+            ",STGT")]
+        public string set50 {
+            get {
+                return ((string)(this["set50"]));
+            }
+            set {
+                this["set50"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"ADVANC,AEONTS,AMATA,AOT,AP,AWC,BANPU,BPP,BBL,BCH,BCP,BCPG,BDMS,BEC,BEM,BGRIM,BH,BJC,BANPU,BTS,CBG,CENTEL,CHG,CK,CKP,COM7,CPALL,CPF,CPN,CRC,DELTA,DTAC,EA,EGCO,EPG,ERW,ESSO,GFPT,GLOBAL,GPSC,GULF,GUNKUL,HANA,HMPRO,INTUCH,IRPC,IVL,JAS,JMT,KBANK,KCE,KKP,KTB,KTC,LH,MAJOR,MEGA,MINT,MTC,ORI,OSP,PLANB,PRM,PSH,PTG,PTT,PTTEP,PTTGC,QH,RATCH,RS,SAWAD,SCB,SCC,SGP,SPALI,SPRC,STA,STEC,SUPER,TASCO,TCAP,THANI,TISCO,TKN,TMB,TOA,TOP,TPIPP,TQM,TRUE,TU,VGI,WHA,X-X,DOHOME,AAV,ACE,RBF,PSL,UTP,THCOM,THAI")]
+        public string set100 {
+            get {
+                return ((string)(this["set100"]));
+            }
+            set {
+                this["set100"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("6")]
+        public string delaysec {
+            get {
+                return ((string)(this["delaysec"]));
+            }
+            set {
+                this["delaysec"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("MINT-W7,ITEL-W2,ALL-W1,")]
+        public string customlist {
+            get {
+                return ((string)(this["customlist"]));
+            }
+            set {
+                this["customlist"] = value;
             }
         }
     }
