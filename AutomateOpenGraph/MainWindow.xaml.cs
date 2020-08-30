@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using WindowsInput;
+
 
 namespace AutomateOpenGraph
 {
@@ -114,14 +116,25 @@ namespace AutomateOpenGraph
             IComparer<StockInfo> sortbyDate = new SortByDate();
             ipoList.Sort(sortbyDate);
 
+            string json = JsonConvert.SerializeObject(ipoList);
+            Console.WriteLine(json);
+
+            List<StockInfo> listfromJson = JsonConvert.DeserializeObject<List<StockInfo>>(json);
+
             CreateIPOWarList();
             ipoWarList.Sort(sortbyDate);
+
+
             
         }
 
         private void CreateIPOList()
         {
             ipoList.Add(new StockInfo("ETC", new DateTime(2020, 8, 18), 5824, "mai", 2.6));  // มุกเดิม pe 85 แต่ทำ eps มา เอาแบบสูงสุดที่เคยมี 
+
+            //string json = JsonConvert.SerializeObject((new StockInfo("ETC", new DateTime(2020, 8, 18), 5824, "mai", 2.6)));
+            //Console.WriteLine(json);
+
             ipoList.Add(new StockInfo("IIG", new DateTime(2020, 8, 6), 552, "mai", 6.6));  // มุกเดิม pe 12 แต่ทำ eps มา พึคมาก 
             ipoList.Add(new StockInfo("SICT", new DateTime(2020, 7, 30), 552, "mai", 1.38));
             ipoList.Add(new StockInfo("STGT", new DateTime(2020, 7, 2), 48578, "SET", 34 ));
