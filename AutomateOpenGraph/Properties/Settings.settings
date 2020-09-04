@@ -12,7 +12,10 @@
       <Value Profile="(Default)">6</Value>
     </Setting>
     <Setting Name="customlist" Type="System.String" Scope="User">
-      <Value Profile="(Default)">MINT-W7,ITEL-W2,ALL-W1,</Value>
+      <Value Profile="(Default)">MINT-W7,ITEL-W2,ALL-W1</Value>
+    </Setting>
+    <Setting Name="market" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SET,SET50,TFEX,^DJIA,MAI</Value>
     </Setting>
   </Settings>
 </SettingsFile>

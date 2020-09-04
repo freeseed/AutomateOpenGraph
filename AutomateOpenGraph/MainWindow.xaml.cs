@@ -52,6 +52,8 @@ namespace AutomateOpenGraph
         private string[] set100Arr = { };
         private string[] set50Arr = { };
         private string[] customArr = { };
+        private string[] marketArr = { };
+
 
 
         private void RemoveSpace(string[] x)
@@ -64,7 +66,7 @@ namespace AutomateOpenGraph
         {
             InitializeComponent();
 
-            this.Title = this.Title + " - Debug";
+            //this.Title = this.Title + " - Debug";
             timer = new DispatcherTimer
             {
                 Interval = TimeSpan.FromSeconds(1)
@@ -83,6 +85,8 @@ namespace AutomateOpenGraph
             string strSET100Setting = Properties.Settings.Default.set100;
             string strDelaySecond = Properties.Settings.Default.delaysec;
             string strCustomList = Properties.Settings.Default.customlist;
+            string strMarketSetting = Properties.Settings.Default.market.Replace("TFEX", TfexSeriesCode);
+
 
             char[] sep = new char[] { ',' };
             set50Arr = strSET50Setting.Split(sep);
@@ -93,6 +97,9 @@ namespace AutomateOpenGraph
 
             customArr = strCustomList.Split(sep);
             RemoveSpace(customArr);
+
+            marketArr = strMarketSetting.Split(sep);
+            RemoveSpace(marketArr);
 
             refreshInt = int.TryParse(strDelaySecond, out int tmpresult) ? tmpresult : 6;  //int.Parse(strDelaySecond);
 
@@ -110,22 +117,49 @@ namespace AutomateOpenGraph
 
             Console.WriteLine(set50Arr);
 
-            AddMarketSymbol();
+            AddMarketSymbol(marketArr);
 
-            CreateIPOList();
+            string text;
             IComparer<StockInfo> sortbyDate = new SortByDate();
-            ipoList.Sort(sortbyDate);
+            //CreateIPOList();
+            try
+            {
+                text = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "ipo.json");
+                ipoList = JsonConvert.DeserializeObject<List<StockInfo>>(text);
+                ipoList.Sort(sortbyDate);
+            }
+            catch (Exception e)
+            {
 
-            string json = JsonConvert.SerializeObject(ipoList);
-            Console.WriteLine(json);
-
-            List<StockInfo> listfromJson = JsonConvert.DeserializeObject<List<StockInfo>>(json);
-
-            CreateIPOWarList();
-            ipoWarList.Sort(sortbyDate);
+                lbMsg.Content = lbMsg.Content + e.Message;
+            }
 
 
-            
+            //string json = JsonConvert.SerializeObject(ipoList);
+            //Console.WriteLine(json);
+            //List<StockInfo> listfromJson = JsonConvert.DeserializeObject<List<StockInfo>>(json);
+
+            //CreateIPOWarList();
+
+            try
+            {
+                text = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "ipowar.json");
+                ipoWarList = JsonConvert.DeserializeObject<List<StockInfo>>(text);
+                ipoWarList.Sort(sortbyDate);
+            }
+            catch (Exception e)
+            {
+
+                lbMsg.Content = lbMsg.Content + e.Message;
+            }
+
+
+            //string json2 = JsonConvert.SerializeObject(ipoWarList);
+            //Console.WriteLine(json2);
+
+            Console.WriteLine(AppDomain.CurrentDomain.BaseDirectory + " " +  System.Reflection.Assembly.GetEntryAssembly().Location);
+
+
         }
 
         private void CreateIPOList()
@@ -175,8 +209,6 @@ namespace AutomateOpenGraph
 
             ipoList.Add(new StockInfo("CAZ", new DateTime(2019, 1, 22), 1092, "mai", 3.9));
             ipoList.Add(new StockInfo("BC", new DateTime(2019, 11, 14), 1450, "mai", 2.86));
-            //ipoList.Add(new StockInfo("XXX", new DateTime(2019, 7, 10), 1080, "mai", 1.8));
-            //ipoList.Add(new StockInfo("XXX", new DateTime(2019, 3, 13), 425, "mai", 1.7));
 
 
         }
@@ -443,53 +475,22 @@ namespace AutomateOpenGraph
 
         }
 
-        private void AddMarketSymbol()
+        private void AddMarketSymbol(string[] marketArr)
         {
-            StockInfo SET = new StockInfo
+
+            foreach(string s in marketArr)
             {
-                StockName = "SET",
-                ChangePercent = 1600,
-                ClosedPrice = 1600
-            };
-
-            stockDataListMarket.Add(SET);
-
-            StockInfo SET50 = new StockInfo
-            {
-                StockName = "SET50",
-                ChangePercent = 1050,
-                ClosedPrice = 1050
-            };
-
-            stockDataListMarket.Add(SET50);
-
-            StockInfo tfex = CreateTfexStockInfo();
-            stockDataListMarket.Add(tfex);
-
-
-            StockInfo MAI = new StockInfo
-            {
-                StockName = "MAI",
-                ChangePercent = 200,
-                ClosedPrice = 200
-            };
-
-            stockDataListMarket.Add(MAI);
+                StockInfo tmp = new StockInfo
+                {
+                    StockName = s,
+                    ChangePercent = 0,
+                    ClosedPrice = 0
+                };
+                stockDataListMarket.Add(tmp);
+            }
 
         }
 
-        private StockInfo CreateTfexStockInfo()
-        {
-            string symbolTfex = TfexSeriesCode;
-            StockInfo tfex = new StockInfo
-            {
-                StockName = symbolTfex,
-                ChangePercent = 1000,
-                ClosedPrice = 1000
-            };
-            return tfex;
-
-        }
 
         private void SetUIAfterRefreshStockList(List<StockInfo> curStockDataList)
         {

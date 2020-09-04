@@ -64,13 +64,25 @@ namespace AutomateOpenGraph.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("MINT-W7,ITEL-W2,ALL-W1,")]
+        [global::System.Configuration.DefaultSettingValueAttribute("MINT-W7,ITEL-W2,ALL-W1")]
         public string customlist {
             get {
                 return ((string)(this["customlist"]));
             }
             set {
                 this["customlist"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SET,SET50,TFEX,^DJIA,MAI")]
+        public string market {
+            get {
+                return ((string)(this["market"]));
+            }
+            set {
+                this["market"] = value;
             }
         }
     }
