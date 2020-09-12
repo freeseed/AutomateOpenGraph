@@ -76,13 +76,25 @@ namespace AutomateOpenGraph.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("SET,SET50,TFEX,^DJIA,MAI")]
+        [global::System.Configuration.DefaultSettingValueAttribute("SET,SET50,TFEX,MAI,^DJIA,^NIX,^HSKI")]
         public string market {
             get {
                 return ((string)(this["market"]));
             }
             set {
                 this["market"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\nevada\\Documents\\vs2017project\\AutomateOpenGraph\\AutomateOpenGraph\\data")]
+        public string datapath {
+            get {
+                return ((string)(this["datapath"]));
+            }
+            set {
+                this["datapath"] = value;
             }
         }
     }

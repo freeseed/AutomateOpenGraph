@@ -345,13 +345,18 @@ namespace AutomateOpenGraph
         private void Command_Open()
         {
             string[] lines = { "" };
+            string strDataPath = Properties.Settings.Default.datapath;
+            if(!System.IO.Directory.Exists(strDataPath))
+            {
+                strDataPath = AppDomain.CurrentDomain.BaseDirectory;
+            }
+
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "Tab Separated Field Excel (*.xls)|*.xls|Text File (*.txt)|*.txt",
-                InitialDirectory = AppDomain.CurrentDomain.BaseDirectory
+                InitialDirectory = strDataPath
             };
-            //openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            //openFileDialog.InitialDirectory = @"C:\Users\nevada\source\repos\AutomateOpenGraph";
+
             if (openFileDialog.ShowDialog() == true)
             {
                 lines = System.IO.File.ReadAllLines(openFileDialog.FileName);

@@ -15,7 +15,10 @@
       <Value Profile="(Default)">MINT-W7,ITEL-W2,ALL-W1</Value>
     </Setting>
     <Setting Name="market" Type="System.String" Scope="User">
-      <Value Profile="(Default)">SET,SET50,TFEX,^DJIA,MAI</Value>
+      <Value Profile="(Default)">SET,SET50,TFEX,MAI,^DJIA,^NIX,^HSKI</Value>
+    </Setting>
+    <Setting Name="datapath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\nevada\Documents\vs2017project\AutomateOpenGraph\AutomateOpenGraph\data</Value>
     </Setting>
   </Settings>
 </SettingsFile>
