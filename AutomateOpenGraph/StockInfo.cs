@@ -12,7 +12,7 @@ namespace AutomateOpenGraph
         public decimal ChangePercent { get; set; }
         public decimal ClosedPrice { get; set; }
         public DateTime IPODate { get; set; }
-        public int IPOSizeML { get; set; }
+        public double IPOSizeML { get; set; }
         public string SETMAI { get; set; }
         public double IPOPrice { get; set; }
 
@@ -29,7 +29,7 @@ namespace AutomateOpenGraph
             this.ClosedPrice = ClosedPrice;
         }
 
-        public StockInfo(string StockName, DateTime IPODate,int IPOSizeML, string SETMAI, double IPOPrice)
+        public StockInfo(string StockName, DateTime IPODate,double IPOSizeML, string SETMAI, double IPOPrice)
         {
             this.StockName = StockName;
             this.IPODate = IPODate;
