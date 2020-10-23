@@ -98,9 +98,9 @@
                         <DataGridTextColumn Header="Stock Name" Binding="{Binding StockName}"  />
                         <DataGridTextColumn Header="% Change" Binding="{Binding ChangePercent, StringFormat={}{0:#,##0.00}}" />
                         <DataGridTextColumn Header="Closed Price" Binding="{Binding ClosedPrice, StringFormat={}{0:n2}}" />
-                        <DataGridTextColumn Header="IPO Date" Binding="{Binding IPODate,StringFormat='yyyy-MM-dd'}" />
-                        <DataGridTextColumn Header="IPO Last" Binding="{Binding IPOLast}" />
-                        <DataGridTextColumn Header="IPO Market Cap" Binding="{Binding IPOSizeML, StringFormat={}{0:#,##0.00}}" />
+                        <DataGridTextColumn Header="Start Date" Binding="{Binding IPODate,StringFormat='yyyy-MM-dd'}" />
+                        <DataGridTextColumn Header="Days" Binding="{Binding IPOLast}" />
+                        <DataGridTextColumn Header="IPO Price/Strike Price" Binding="{Binding IPOPrice, StringFormat={}{0:#,##0.00}}" />
                         <DataGridTextColumn Header="SET/Mai" Binding="{Binding SETMAI}" />
 
                     </DataGrid.Columns>
