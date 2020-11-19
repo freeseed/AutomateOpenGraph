@@ -1,5 +1,75 @@
 [
   {
+    "StockName": "RT",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-11-12T00:00:00",
+    "IPOSizeML": 1.92,
+    "SETMAI": "SET",
+    "IPOPrice": 1.92,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "SABUY",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-11-11T00:00:00",
+    "IPOSizeML": 2.5,
+    "SETMAI": "mai",
+    "IPOPrice": 2.5,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "NCAP",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-11-09T00:00:00",
+    "IPOSizeML": 2.2,
+    "SETMAI": "SET",
+    "IPOPrice": 2.2,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "LEO",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-11-05T00:00:00",
+    "IPOSizeML": 3.42,
+    "SETMAI": "mai",
+    "IPOPrice": 3.42,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "WGE",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-11-03T00:00:00",
+    "IPOSizeML": 2.3,
+    "SETMAI": "SET",
+    "IPOPrice": 2.3,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "SFT",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-10-29T00:00:00",
+    "IPOSizeML": 3.8,
+    "SETMAI": "mai",
+    "IPOPrice": 3.8,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "DHOUSE",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-10-26T00:00:00",
+    "IPOSizeML": 0.6,
+    "SETMAI": "mai",
+    "IPOPrice": 0.6,
+    "IPOLast": 0.0
+  },
+  {
     "StockName": "SCGP",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -15,7 +85,7 @@
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-20T00:00:00",
     "IPOSizeML": 1.50,
-    "SETMAI": "SET",
+    "SETMAI": "mai",
     "IPOPrice": 1.50,
     "IPOLast": 0.0
   },

@@ -1,5 +1,15 @@
 [
    {
+      "StockName":"MORE-W2",
+      "ChangePercent":0.0,
+      "ClosedPrice":0.0,
+      "IPODate":"2020-11-11T00:00:00",
+      "IPOSizeML":543,
+      "SETMAI":"SET",
+      "IPOPrice":2.0,
+      "IPOLast":0.0
+   },
+   {
       "StockName":"CWT-W5",
       "ChangePercent":0.0,
       "ClosedPrice":0.0,
