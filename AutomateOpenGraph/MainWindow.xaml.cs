@@ -76,6 +76,7 @@ namespace AutomateOpenGraph
             lbMsg.Content = "Open file .xls to see data and Send Keys";
             lbDataInfo.Content = "Data is empty";
             lbStatus.Content = "Last Sent : -";
+            lbFileName.Content = "File Name : -";
 
             txtDelay.Text = refreshInt.ToString();
 
@@ -360,6 +361,7 @@ namespace AutomateOpenGraph
             if (openFileDialog.ShowDialog() == true)
             {
                 lines = System.IO.File.ReadAllLines(openFileDialog.FileName);
+                lbFileName.Content = "File Name : " + openFileDialog.FileName;
             }
             else
             {

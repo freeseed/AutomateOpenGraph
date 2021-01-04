@@ -1,5 +1,65 @@
 [
    {
+      "StockName":"JMT-W3",
+      "ChangePercent":0.0,
+      "ClosedPrice":0.0,
+      "IPODate":"2020-12-08T00:00:00",
+      "IPOSizeML":100,
+      "SETMAI":"SET",
+      "IPOPrice":42,
+      "IPOLast":0.0
+   },
+   {
+      "StockName":"WAVE-W2",
+      "ChangePercent":0.0,
+      "ClosedPrice":0.0,
+      "IPODate":"2020-12-03T00:00:00",
+      "IPOSizeML":156,
+      "SETMAI":"SET",
+      "IPOPrice":0.7,
+      "IPOLast":0.0
+   },
+   {
+      "StockName":"DIMET-W4",
+      "ChangePercent":0.0,
+      "ClosedPrice":0.0,
+      "IPODate":"2020-12-01T00:00:00",
+      "IPOSizeML":806,
+      "SETMAI":"SET",
+      "IPOPrice":0.5,
+      "IPOLast":0.0
+   },
+   {
+      "StockName":"JCK-W6",
+      "ChangePercent":0.0,
+      "ClosedPrice":0.0,
+      "IPODate":"2020-11-26T00:00:00",
+      "IPOSizeML":1073,
+      "SETMAI":"SET",
+      "IPOPrice":2.0,
+      "IPOLast":0.0
+   },
+   {
+      "StockName":"BCPG-W2",
+      "ChangePercent":0.0,
+      "ClosedPrice":0.0,
+      "IPODate":"2020-11-24T00:00:00",
+      "IPOSizeML":89,
+      "SETMAI":"SET",
+      "IPOPrice":8.0,
+      "IPOLast":0.0
+   },
+   {
+      "StockName":"BCPG-W1",
+      "ChangePercent":0.0,
+      "ClosedPrice":0.0,
+      "IPODate":"2020-11-24T00:00:00",
+      "IPOSizeML":89,
+      "SETMAI":"SET",
+      "IPOPrice":8.0,
+      "IPOLast":0.0
+   },
+   {
       "StockName":"MORE-W2",
       "ChangePercent":0.0,
       "ClosedPrice":0.0,

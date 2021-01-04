@@ -39,7 +39,7 @@ namespace AutomateOpenGraph.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"ADVANC,AEONTS,AMATA,AOT,AP,AWC,BANPU,BPP,BBL,BCH,BCP,BCPG,BDMS,BEC,BEM,BGRIM,BH,BJC,BANPU,BTS,CBG,CENTEL,CHG,CK,CKP,COM7,CPALL,CPF,CPN,CRC,DELTA,DTAC,EA,EGCO,EPG,ERW,ESSO,GFPT,GLOBAL,GPSC,GULF,GUNKUL,HANA,HMPRO,INTUCH,IRPC,IVL,JAS,JMT,KBANK,KCE,KKP,KTB,KTC,LH,MAJOR,MEGA,MINT,MTC,ORI,OSP,PLANB,PRM,PSH,PTG,PTT,PTTEP,PTTGC,QH,RATCH,RS,SAWAD,SCB,SCC,SCGP,SGP,SPALI,SPRC,STA,STEC,SUPER,TASCO,TCAP,THANI,TISCO,TKN,TMB,TOA,TOP,TPIPP,TQM,TRUE,TU,VGI,WHA,X-X,DOHOME,AAV,ACE,RBF,PSL,JMART,BAM,MAKRO,STGT,NER,JKN,VGI-W2,MINT-W6,MINT-W7,SPCG,BTS-W5,NER-W1")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"ADVANC,AEONTS,AMATA,AOT,AP,AWC,BANPU,BPP,BBL,BCH,BCP,BCPG,BDMS,BEC,BEM,BGRIM,BH,BJC,BANPU,BTS,CBG,CENTEL,CHG,CK,CKP,COM7,CPALL,CPF,CPN,CRC,DELTA,DTAC,EA,EGCO,EPG,ERW,ESSO,GFPT,GLOBAL,GPSC,GULF,GUNKUL,HANA,HMPRO,INTUCH,IRPC,IVL,JAS,JMT,KBANK,KCE,KKP,KTB,KTC,LH,MAJOR,MEGA,MINT,MTC,ORI,OSP,PLANB,PRM,PSH,PTG,PTT,PTTEP,PTTGC,QH,RATCH,RS,SAWAD,SCB,SCC,SCGP,SGP,SPALI,SPRC,STA,STEC,SUPER,TASCO,TCAP,THANI,TISCO,TKN,TMB,TOA,TOP,TPIPP,TQM,TRUE,TU,VGI,WHA,X-X,DOHOME,AAV,ACE,RBF,PSL,JMART,BAM,MAKRO,STGT,NER,VGI-W2,MINT-W6,MINT-W7,SPCG,NER-W1,BEAUTY,THCOM,BLAND,AMANAH,WORK,BEC,BWG,BLAND,AU")]
         public string set100 {
             get {
                 return ((string)(this["set100"]));
@@ -63,7 +63,7 @@ namespace AutomateOpenGraph.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("IIG,YGG,IP,RBF,SICT,SPVI,ASIAN,JKN,WICE,SPCG")]
+        [global::System.Configuration.DefaultSettingValueAttribute("BLAND")]
         public string customlist {
             get {
                 return ((string)(this["customlist"]));
@@ -75,7 +75,7 @@ namespace AutomateOpenGraph.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("SET,SET50,TFEX,MAI,^DJIA,^NIX,^HSKI")]
+        [global::System.Configuration.DefaultSettingValueAttribute("SET,SET50,TFEX,MAI,^DJIA,^NIX,^HSKI,^DAX,^FTSE,^JKSE,^KOSPI")]
         public string market {
             get {
                 return ((string)(this["market"]));

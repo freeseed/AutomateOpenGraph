@@ -85,6 +85,7 @@
                 <Label Name="lbMsg" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"  Content="lbMsg" />
                 <Label Name="lbStatus" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Last Sent : " />
                 <TextBlock Name="txtLoadingLog" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="WrapWithOverflow" />
+                <Label Name="lbFileName" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Content="lbFileName" />
                 <Label Name="lbDataInfo" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Content="lbDataInfo" />
             </StackPanel>
 
