@@ -1,5 +1,15 @@
 [
   {
+    "StockName": "JAK",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-01-18T00:00:00",
+    "IPOSizeML": 1.45,
+    "SETMAI": "mai",
+    "IPOPrice": 1.45,
+    "IPOLast": 0.0
+  },
+  {
     "StockName": "SA",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,

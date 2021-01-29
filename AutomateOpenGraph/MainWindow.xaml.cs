@@ -78,7 +78,7 @@ namespace AutomateOpenGraph
             lbStatus.Content = "Last Sent : -";
             lbFileName.Content = "File Name : -";
 
-            txtDelay.Text = refreshInt.ToString();
+            
 
             gridTable.ItemsSource = stockDataList;
 
@@ -103,6 +103,8 @@ namespace AutomateOpenGraph
             RemoveSpace(marketArr);
 
             refreshInt = int.TryParse(strDelaySecond, out int tmpresult) ? tmpresult : 6;  //int.Parse(strDelaySecond);
+
+            txtDelay.Text = refreshInt.ToString();
 
             set100Arr = Array.FindAll(set100Arr, x => !set50Arr.Contains(x));
 
