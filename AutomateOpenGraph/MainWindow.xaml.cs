@@ -437,7 +437,16 @@ namespace AutomateOpenGraph
 
                 if (set100Arr.Contains(token[0])) stockDataListS100.Add(s);
                 else if (set50Arr.Contains(token[0])) stockDataListS50.Add(s);
-                else if (Regex.IsMatch(token[0], @"-W")) stockDataListWar.Add(s);
+                else if (Regex.IsMatch(token[0], @"-W"))
+                {
+                    StockInfo ss = new StockInfo();
+                    ss.StockName = s.StockName.Substring(0, s.StockName.IndexOf('-'));
+                    ss.ChangePercent =  s.ChangePercent;
+                    ss.ClosedPrice =  s.ClosedPrice;
+                    stockDataListWar.Add(s);
+                    stockDataListWar.Add(ss);
+
+                }
                 else if (Regex.IsMatch(token[0], @"^S50")) stockDataListS50DW.Add(s);
                 else if (Regex.IsMatch(token[0], @"\d\d\d")) stockDataListAllDW.Add(s);
                 else stockDataListExcludeS100.Add(s);
