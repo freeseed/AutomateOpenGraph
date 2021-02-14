@@ -1,5 +1,15 @@
 [
   {
+    "StockName": "OR",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-02-11T00:00:00",
+    "IPOSizeML": 18,
+    "SETMAI": "SET",
+    "IPOPrice": 18,
+    "IPOLast": 0.0
+  },
+  {
     "StockName": "JAK",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -19,7 +29,7 @@
     "IPOPrice": 5.5,
     "IPOLast": 0.0
   },
-   {
+  {
     "StockName": "KEX",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -49,7 +59,7 @@
     "IPOPrice": 3.7,
     "IPOLast": 0.0
   },
-   {
+  {
     "StockName": "JR",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,

@@ -1,262 +1,302 @@
 [
-   {
-      "StockName":"STARK-W1",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2021-01-15T00:00:00",
-      "IPOSizeML":3968,
-      "SETMAI":"SET",
-      "IPOPrice":5,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"JMT-W3",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-12-08T00:00:00",
-      "IPOSizeML":100,
-      "SETMAI":"SET",
-      "IPOPrice":42,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"WAVE-W2",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-12-03T00:00:00",
-      "IPOSizeML":156,
-      "SETMAI":"SET",
-      "IPOPrice":0.7,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"DIMET-W4",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-12-01T00:00:00",
-      "IPOSizeML":806,
-      "SETMAI":"SET",
-      "IPOPrice":0.5,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"JCK-W6",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-11-26T00:00:00",
-      "IPOSizeML":1073,
-      "SETMAI":"SET",
-      "IPOPrice":2.0,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"BCPG-W2",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-11-24T00:00:00",
-      "IPOSizeML":89,
-      "SETMAI":"SET",
-      "IPOPrice":8.0,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"BCPG-W1",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-11-24T00:00:00",
-      "IPOSizeML":89,
-      "SETMAI":"SET",
-      "IPOPrice":8.0,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"MORE-W2",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-11-11T00:00:00",
-      "IPOSizeML":543,
-      "SETMAI":"SET",
-      "IPOPrice":2.0,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"CWT-W5",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-10-08T00:00:00",
-      "IPOSizeML":63,
-      "SETMAI":"SET",
-      "IPOPrice":3.50,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"AEC-W6",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-10-08T00:00:00",
-      "IPOSizeML":1530,
-      "SETMAI":"SET",
-      "IPOPrice":0.20,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"SAWAD-W2",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-09-18T00:00:00",
-      "IPOSizeML":54,
-      "SETMAI":"SET",
-      "IPOPrice":100,
-      "IPOLast":0.0
-   },
-   {
-      "StockName":"ALL-W1",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-08-28T00:00:00",
-      "IPOSizeML":140,
-      "SETMAI":"mai",
-      "IPOPrice":2.8,
-      "IPOLast":3.0
-   },
-   {
-      "StockName":"ITEL-W2",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-08-27T00:00:00",
-      "IPOSizeML":250,
-      "SETMAI":"mai",
-      "IPOPrice":3.0,
-      "IPOLast":4.0
-   },
-   {
-      "StockName":"MINT-W7",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-08-26T00:00:00",
-      "IPOSizeML":235,
-      "SETMAI":"SET",
-      "IPOPrice":21.6,
-      "IPOLast":5.0
-   },
-   {
-      "StockName":"UREKA-W2",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-07-10T00:00:00",
-      "IPOSizeML":295,
-      "SETMAI":"SET",
-      "IPOPrice":1.0,
-      "IPOLast":52.0
-   },
-   {
-      "StockName":"JMART-W3",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-07-03T00:00:00",
-      "IPOSizeML":100,
-      "SETMAI":"SET",
-      "IPOPrice":11.0,
-      "IPOLast":59.0
-   },
-   {
-      "StockName":"JMART-W4",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-07-03T00:00:00",
-      "IPOSizeML":100,
-      "SETMAI":"SET",
-      "IPOPrice":15.0,
-      "IPOLast":59.0
-   },
-   {
-      "StockName":"NER-W1",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-06-18T00:00:00",
-      "IPOSizeML":307,
-      "SETMAI":"SET",
-      "IPOPrice":1.8,
-      "IPOLast":74.0
-   },
-   {
-      "StockName":"NEX-W2",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-06-18T00:00:00",
-      "IPOSizeML":223,
-      "SETMAI":"SET",
-      "IPOPrice":1.0,
-      "IPOLast":74.0
-   },
-   {
-      "StockName":"CHAYO-W1",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-06-09T00:00:00",
-      "IPOSizeML":209,
-      "SETMAI":"SET",
-      "IPOPrice":6.5,
-      "IPOLast":83.0
-   },
-   {
-      "StockName":"III-W1",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-05-28T00:00:00",
-      "IPOSizeML":152,
-      "SETMAI":"SET",
-      "IPOPrice":6.0,
-      "IPOLast":95.0
-   },
-   {
-      "StockName":"TAPAC-W4",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-04-13T00:00:00",
-      "IPOSizeML":205,
-      "SETMAI":"SET",
-      "IPOPrice":9.0,
-      "IPOLast":140.0
-   },
-   {
-      "StockName":"D-W1",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-03-17T00:00:00",
-      "IPOSizeML":40,
-      "SETMAI":"SET",
-      "IPOPrice":4.0,
-      "IPOLast":167.0
-   },
-   {
-      "StockName":"BTS-W5",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2020-02-27T00:00:00",
-      "IPOSizeML":1315,
-      "SETMAI":"SET",
-      "IPOPrice":14.0,
-      "IPOLast":186.0
-   },
-   {
-      "StockName":"SMART-W2",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2019-10-22T00:00:00",
-      "IPOSizeML":91,
-      "SETMAI":"SET",
-      "IPOPrice":1.5,
-      "IPOLast":314.0
-   },
-   {
-      "StockName":"B-W5",
-      "ChangePercent":0.0,
-      "ClosedPrice":0.0,
-      "IPODate":"2019-09-26T00:00:00",
-      "IPOSizeML":290,
-      "SETMAI":"SET",
-      "IPOPrice":0.35,
-      "IPOLast":340.0
-   }
+  {
+    "StockName": "AS-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-02-09T00:00:00",
+    "IPOSizeML": 83,
+    "SETMAI": "SET",
+    "IPOPrice": 3.50,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "TFI-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-02-03T00:00:00",
+    "IPOSizeML": 6142,
+    "SETMAI": "SET",
+    "IPOPrice": 0.15,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "W-W5",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-01-25T00:00:00",
+    "IPOSizeML": 4883,
+    "SETMAI": "SET",
+    "IPOPrice": 0.14,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "NOBLE-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-01-21T00:00:00",
+    "IPOSizeML": 324,
+    "SETMAI": "SET",
+    "IPOPrice": 8,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "STARK-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-01-15T00:00:00",
+    "IPOSizeML": 3968,
+    "SETMAI": "SET",
+    "IPOPrice": 5,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "JMT-W3",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-12-08T00:00:00",
+    "IPOSizeML": 100,
+    "SETMAI": "SET",
+    "IPOPrice": 42,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "WAVE-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-12-03T00:00:00",
+    "IPOSizeML": 156,
+    "SETMAI": "SET",
+    "IPOPrice": 0.7,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "DIMET-W4",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-12-01T00:00:00",
+    "IPOSizeML": 806,
+    "SETMAI": "SET",
+    "IPOPrice": 0.5,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "JCK-W6",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-11-26T00:00:00",
+    "IPOSizeML": 1073,
+    "SETMAI": "SET",
+    "IPOPrice": 2.0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "BCPG-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-11-24T00:00:00",
+    "IPOSizeML": 89,
+    "SETMAI": "SET",
+    "IPOPrice": 8.0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "BCPG-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-11-24T00:00:00",
+    "IPOSizeML": 89,
+    "SETMAI": "SET",
+    "IPOPrice": 8.0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "MORE-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-11-11T00:00:00",
+    "IPOSizeML": 543,
+    "SETMAI": "SET",
+    "IPOPrice": 2.0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "CWT-W5",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-10-08T00:00:00",
+    "IPOSizeML": 63,
+    "SETMAI": "SET",
+    "IPOPrice": 3.50,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "AEC-W6",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-10-08T00:00:00",
+    "IPOSizeML": 1530,
+    "SETMAI": "SET",
+    "IPOPrice": 0.20,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "SAWAD-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-09-18T00:00:00",
+    "IPOSizeML": 54,
+    "SETMAI": "SET",
+    "IPOPrice": 100,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "ALL-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-08-28T00:00:00",
+    "IPOSizeML": 140,
+    "SETMAI": "mai",
+    "IPOPrice": 2.8,
+    "IPOLast": 3.0
+  },
+  {
+    "StockName": "ITEL-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-08-27T00:00:00",
+    "IPOSizeML": 250,
+    "SETMAI": "mai",
+    "IPOPrice": 3.0,
+    "IPOLast": 4.0
+  },
+  {
+    "StockName": "MINT-W7",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-08-26T00:00:00",
+    "IPOSizeML": 235,
+    "SETMAI": "SET",
+    "IPOPrice": 21.6,
+    "IPOLast": 5.0
+  },
+  {
+    "StockName": "UREKA-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-07-10T00:00:00",
+    "IPOSizeML": 295,
+    "SETMAI": "SET",
+    "IPOPrice": 1.0,
+    "IPOLast": 52.0
+  },
+  {
+    "StockName": "JMART-W3",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-07-03T00:00:00",
+    "IPOSizeML": 100,
+    "SETMAI": "SET",
+    "IPOPrice": 11.0,
+    "IPOLast": 59.0
+  },
+  {
+    "StockName": "JMART-W4",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-07-03T00:00:00",
+    "IPOSizeML": 100,
+    "SETMAI": "SET",
+    "IPOPrice": 15.0,
+    "IPOLast": 59.0
+  },
+  {
+    "StockName": "NER-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-06-18T00:00:00",
+    "IPOSizeML": 307,
+    "SETMAI": "SET",
+    "IPOPrice": 1.8,
+    "IPOLast": 74.0
+  },
+  {
+    "StockName": "NEX-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-06-18T00:00:00",
+    "IPOSizeML": 223,
+    "SETMAI": "SET",
+    "IPOPrice": 1.0,
+    "IPOLast": 74.0
+  },
+  {
+    "StockName": "CHAYO-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-06-09T00:00:00",
+    "IPOSizeML": 209,
+    "SETMAI": "SET",
+    "IPOPrice": 6.5,
+    "IPOLast": 83.0
+  },
+  {
+    "StockName": "III-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-05-28T00:00:00",
+    "IPOSizeML": 152,
+    "SETMAI": "SET",
+    "IPOPrice": 6.0,
+    "IPOLast": 95.0
+  },
+  {
+    "StockName": "TAPAC-W4",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-04-13T00:00:00",
+    "IPOSizeML": 205,
+    "SETMAI": "SET",
+    "IPOPrice": 9.0,
+    "IPOLast": 140.0
+  },
+  {
+    "StockName": "D-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-03-17T00:00:00",
+    "IPOSizeML": 40,
+    "SETMAI": "SET",
+    "IPOPrice": 4.0,
+    "IPOLast": 167.0
+  },
+  {
+    "StockName": "BTS-W5",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2020-02-27T00:00:00",
+    "IPOSizeML": 1315,
+    "SETMAI": "SET",
+    "IPOPrice": 14.0,
+    "IPOLast": 186.0
+  },
+  {
+    "StockName": "SMART-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2019-10-22T00:00:00",
+    "IPOSizeML": 91,
+    "SETMAI": "SET",
+    "IPOPrice": 1.5,
+    "IPOLast": 314.0
+  },
+  {
+    "StockName": "B-W5",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2019-09-26T00:00:00",
+    "IPOSizeML": 290,
+    "SETMAI": "SET",
+    "IPOPrice": 0.35,
+    "IPOLast": 340.0
+  }
 ]
