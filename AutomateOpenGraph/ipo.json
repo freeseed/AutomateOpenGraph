@@ -1,5 +1,25 @@
 [
   {
+    "StockName": "KISS",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-02-19T00:00:00",
+    "IPOSizeML": 9,
+    "SETMAI": "SET",
+    "IPOPrice": 9,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "TQR",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-02-17T00:00:00",
+    "IPOSizeML": 5.10,
+    "SETMAI": "mai",
+    "IPOPrice": 5.10,
+    "IPOLast": 0.0
+  },
+  {
     "StockName": "OR",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -473,7 +493,7 @@
     "StockName": "ACG",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
-    "IPODate": "2019-06-27T00:00:00",
+    "IPODate": "2019-06-19T00:00:00",
     "IPOSizeML": 1.44,
     "SETMAI": "mai",
     "IPOPrice": 1.44,

@@ -1,5 +1,15 @@
 [
   {
+    "StockName": "B52-W3",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-02-23T00:00:00",
+    "IPOSizeML": 240,
+    "SETMAI": "SET",
+    "IPOPrice": 0.25,
+    "IPOLast": 0.0
+  },
+  {
     "StockName": "AS-W2",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -268,26 +278,6 @@
     "SETMAI": "SET",
     "IPOPrice": 4.0,
     "IPOLast": 167.0
-  },
-  {
-    "StockName": "BTS-W5",
-    "ChangePercent": 0.0,
-    "ClosedPrice": 0.0,
-    "IPODate": "2020-02-27T00:00:00",
-    "IPOSizeML": 1315,
-    "SETMAI": "SET",
-    "IPOPrice": 14.0,
-    "IPOLast": 186.0
-  },
-  {
-    "StockName": "SMART-W2",
-    "ChangePercent": 0.0,
-    "ClosedPrice": 0.0,
-    "IPODate": "2019-10-22T00:00:00",
-    "IPOSizeML": 91,
-    "SETMAI": "SET",
-    "IPOPrice": 1.5,
-    "IPOLast": 314.0
   },
   {
     "StockName": "B-W5",

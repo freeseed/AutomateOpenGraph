@@ -403,7 +403,11 @@ namespace AutomateOpenGraph
 
             SetUIAfterRefreshStockList(curStockDataList);
 
-            CheckWhatIsMissing();
+            if (openFileDialog.FileName.Contains("_all"))
+            {
+                CheckWhatIsMissing();
+            }
+            
 
 
         }
