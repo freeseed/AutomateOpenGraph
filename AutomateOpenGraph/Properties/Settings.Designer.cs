@@ -39,7 +39,7 @@ namespace AutomateOpenGraph.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"ADVANC,AEONTS,AMATA,AOT,AP,AWC,BANPU,BPP,BBL,BCH,BCP,BCPG,BDMS,BEC,BEM,BGRIM,BH,BJC,BANPU,BTS,CBG,CENTEL,CHG,CK,CKP,COM7,CPALL,CPF,CPN,CRC,DELTA,DTAC,EA,EGCO,EPG,ERW,ESSO,GFPT,GLOBAL,GPSC,GULF,GUNKUL,HANA,HMPRO,INTUCH,IRPC,IVL,JAS,JMT,KBANK,KCE,KKP,KTB,KTC,LH,MAJOR,MEGA,MINT,MTC,ORI,OSP,PLANB,PRM,PSH,PTG,PTT,PTTEP,PTTGC,QH,RATCH,RS,SAWAD,SCB,SCC,SCGP,SGP,SPALI,SPRC,STA,STEC,SUPER,TASCO,TCAP,THANI,TISCO,TKN,TMB,TOA,TOP,TPIPP,TQM,TRUE,TU,VGI,WHA,X-X,DOHOME,AAV,ACE,PSL,JMART,BAM,MAKRO,STGT,NER,SPCG,BEAUTY,THCOM,AMANAH,WORK,BEC,AU,TVO,KEX,NCAP,RBF,DOD,OR")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"ADVANC,AEONTS,AMATA,AOT,AP,AWC,BANPU,BPP,BBL,BCH,BCP,BCPG,BDMS,BEC,BEM,BGRIM,BH,BJC,BANPU,BTS,CBG,CENTEL,CK,CKP,COM7,CPALL,CPF,CPN,CRC,DELTA,DTAC,EA,EGCO,EPG,ERW,ESSO,GFPT,GLOBAL,GPSC,GULF,GUNKUL,HANA,HMPRO,INTUCH,IRPC,IVL,JAS,JMT,KBANK,KCE,KKP,KTB,KTC,LH,MAJOR,MEGA,MINT,MTC,ORI,OSP,PLANB,PRM,PSH,PTG,PTT,PTTEP,PTTGC,RATCH,RS,SAWAD,SCB,SCC,SCGP,SGP,SPALI,SPRC,STA,STEC,SUPER,TASCO,TCAP,THANI,TISCO,TKN,TMB,TOA,TOP,TPIPP,TQM,TRUE,TU,VGI,WHA,X-X,DOHOME,AAV,ACE,PSL,JMART,BAM,MAKRO,STGT,NER,SPCG,BEAUTY,THCOM,AMANAH,WORK,BEC,AU,TVO,KEX,NCAP,RBF,DOD,OR,SYNEX,JKN,NCAP,MICRO,ETC")]
         public string set100 {
             get {
                 return ((string)(this["set100"]));
@@ -75,7 +75,7 @@ namespace AutomateOpenGraph.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("SET,SET50,TFEX,MAI,^DJIA,^NIX,^HSKI,^DAX,^FTSE,^JKSE,^KOSPI")]
+        [global::System.Configuration.DefaultSettingValueAttribute("SET,SET50,TFEX,MAI,^DJIA,^NIX,^HSKI,^DAX,^FTSE,^JKSE,^KOSPI,RSS3F_CON,BDI,NYMEX")]
         public string market {
             get {
                 return ((string)(this["market"]));
