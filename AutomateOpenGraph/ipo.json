@@ -1,10 +1,20 @@
 [
   {
+    "StockName": "PACO",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-03-22T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SET",
+    "IPOPrice": 1.4,
+    "IPOLast": 0.0
+  },
+  {
     "StockName": "KISS",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2021-02-19T00:00:00",
-    "IPOSizeML": 9,
+    "IPOSizeML": 0,
     "SETMAI": "SET",
     "IPOPrice": 9,
     "IPOLast": 0.0
@@ -14,7 +24,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2021-02-17T00:00:00",
-    "IPOSizeML": 5.10,
+    "IPOSizeML": 0,
     "SETMAI": "mai",
     "IPOPrice": 5.10,
     "IPOLast": 0.0
@@ -24,7 +34,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2021-02-11T00:00:00",
-    "IPOSizeML": 18,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 18,
     "IPOLast": 0.0
@@ -34,7 +44,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2021-01-18T00:00:00",
-    "IPOSizeML": 1.45,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 1.45,
     "IPOLast": 0.0
@@ -44,7 +54,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-12-25T00:00:00",
-    "IPOSizeML": 5.5,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 5.5,
     "IPOLast": 0.0
@@ -54,7 +64,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-12-24T00:00:00",
-    "IPOSizeML": 28,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 28,
     "IPOLast": 0.0
@@ -64,7 +74,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-12-22T00:00:00",
-    "IPOSizeML": 1.1,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 1.1,
     "IPOLast": 0.0
@@ -74,7 +84,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-12-08T00:00:00",
-    "IPOSizeML": 3.7,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 3.7,
     "IPOLast": 0.0
@@ -84,7 +94,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-11-30T00:00:00",
-    "IPOSizeML": 5.5,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 5.5,
     "IPOLast": 0.0
@@ -94,7 +104,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-11-12T00:00:00",
-    "IPOSizeML": 1.92,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 1.92,
     "IPOLast": 0.0
@@ -104,7 +114,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-11-11T00:00:00",
-    "IPOSizeML": 2.5,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 2.5,
     "IPOLast": 0.0
@@ -114,7 +124,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-11-09T00:00:00",
-    "IPOSizeML": 2.2,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 2.2,
     "IPOLast": 0.0
@@ -124,7 +134,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-11-05T00:00:00",
-    "IPOSizeML": 3.42,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 3.42,
     "IPOLast": 0.0
@@ -134,7 +144,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-11-03T00:00:00",
-    "IPOSizeML": 2.3,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 2.3,
     "IPOLast": 0.0
@@ -144,7 +154,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-29T00:00:00",
-    "IPOSizeML": 3.8,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 3.8,
     "IPOLast": 0.0
@@ -154,7 +164,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-26T00:00:00",
-    "IPOSizeML": 0.6,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 0.6,
     "IPOLast": 0.0
@@ -164,7 +174,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-22T00:00:00",
-    "IPOSizeML": 35,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 35,
     "IPOLast": 0.0
@@ -174,7 +184,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-20T00:00:00",
-    "IPOSizeML": 1.50,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 1.50,
     "IPOLast": 0.0
@@ -184,7 +194,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-14T00:00:00",
-    "IPOSizeML": 6.50,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 6.50,
     "IPOLast": 0.0
@@ -194,7 +204,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-09T00:00:00",
-    "IPOSizeML": 4.60,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 4.60,
     "IPOLast": 0.0
@@ -204,7 +214,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-08T00:00:00",
-    "IPOSizeML": 0.80,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 0.80,
     "IPOLast": 0.0
@@ -214,7 +224,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-07T00:00:00",
-    "IPOSizeML": 0.88,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 0.88,
     "IPOLast": 0.0
@@ -224,7 +234,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-10-01T00:00:00",
-    "IPOSizeML": 2.65,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 2.65,
     "IPOLast": 0.0
@@ -234,7 +244,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-09-08T00:00:00",
-    "IPOSizeML": 1.9,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 1.9,
     "IPOLast": 0.0
@@ -244,7 +254,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-08-18T00:00:00",
-    "IPOSizeML": 2.6,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 2.6,
     "IPOLast": 0.0
@@ -254,7 +264,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-08-06T00:00:00",
-    "IPOSizeML": 6.6,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 6.6,
     "IPOLast": 0.0
@@ -264,7 +274,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-07-30T00:00:00",
-    "IPOSizeML": 1.38,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 1.38,
     "IPOLast": 0.0
@@ -274,7 +284,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-07-02T00:00:00",
-    "IPOSizeML": 34.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 34.0,
     "IPOLast": 0.0
@@ -284,7 +294,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-02-20T00:00:00",
-    "IPOSizeML": 42.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 42.0,
     "IPOLast": 0.0
@@ -294,7 +304,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2020-01-07T00:00:00",
-    "IPOSizeML": 5.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 5.0,
     "IPOLast": 0.0
@@ -304,7 +314,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-12-26T00:00:00",
-    "IPOSizeML": 6.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 6.0,
     "IPOLast": 0.0
@@ -314,7 +324,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-12-19T00:00:00",
-    "IPOSizeML": 3.88,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 3.88,
     "IPOLast": 0.0
@@ -334,7 +344,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-12-16T00:00:00",
-    "IPOSizeML": 17.5,
+    "IPOSizeML": 0.5,
     "SETMAI": "SET",
     "IPOPrice": 17.5,
     "IPOLast": 0.0
@@ -344,7 +354,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-11-29T00:00:00",
-    "IPOSizeML": 1.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 1.0,
     "IPOLast": 0.0
@@ -354,7 +364,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-11-22T00:00:00",
-    "IPOSizeML": 2.46,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 2.46,
     "IPOLast": 0.0
@@ -364,7 +374,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-11-15T00:00:00",
-    "IPOSizeML": 2.5,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 2.5,
     "IPOLast": 0.0
@@ -374,7 +384,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-11-14T00:00:00",
-    "IPOSizeML": 2.86,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 2.86,
     "IPOLast": 0.0
@@ -384,7 +394,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-11-13T00:00:00",
-    "IPOSizeML": 4.4,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 4.4,
     "IPOLast": 0.0
@@ -394,7 +404,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-11-12T00:00:00",
-    "IPOSizeML": 5.2,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 5.2,
     "IPOLast": 0.0
@@ -404,7 +414,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-11-05T00:00:00",
-    "IPOSizeML": 7.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 7.0,
     "IPOLast": 0.0
@@ -414,7 +424,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-10-24T00:00:00",
-    "IPOSizeML": 3.3,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 3.3,
     "IPOLast": 0.0
@@ -424,7 +434,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-10-18T00:00:00",
-    "IPOSizeML": 2.38,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 2.38,
     "IPOLast": 0.0
@@ -434,7 +444,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-10-10T00:00:00",
-    "IPOSizeML": 6.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 6.0,
     "IPOLast": 0.0
@@ -444,7 +454,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-10-08T00:00:00",
-    "IPOSizeML": 2.69,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 2.69,
     "IPOLast": 0.0
@@ -454,7 +464,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-08-06T00:00:00",
-    "IPOSizeML": 7.8,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 7.8,
     "IPOLast": 0.0
@@ -464,7 +474,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-08-01T00:00:00",
-    "IPOSizeML": 1.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 1.0,
     "IPOLast": 0.0
@@ -474,7 +484,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-07-26T00:00:00",
-    "IPOSizeML": 22.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 22.0,
     "IPOLast": 0.0
@@ -484,7 +494,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-07-10T00:00:00",
-    "IPOSizeML": 1.8,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 1.8,
     "IPOLast": 0.0
@@ -494,7 +504,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-06-19T00:00:00",
-    "IPOSizeML": 1.44,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 1.44,
     "IPOLast": 0.0
@@ -504,7 +514,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-06-11T00:00:00",
-    "IPOSizeML": 2.5,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 2.5,
     "IPOLast": 0.0
@@ -514,7 +524,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-05-21T00:00:00",
-    "IPOSizeML": 1.75,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 1.75,
     "IPOLast": 0.0
@@ -524,7 +534,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-05-08T00:00:00",
-    "IPOSizeML": 4.9,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 4.9,
     "IPOLast": 0.0
@@ -534,7 +544,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-05-03T00:00:00",
-    "IPOSizeML": 10.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 10.0,
     "IPOLast": 0.0
@@ -544,7 +554,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-03-13T00:00:00",
-    "IPOSizeML": 1.7,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 1.7,
     "IPOLast": 0.0
@@ -554,7 +564,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-02-20T00:00:00",
-    "IPOSizeML": 13.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
     "IPOPrice": 13.0,
     "IPOLast": 0.0
@@ -564,7 +574,7 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2019-01-22T00:00:00",
-    "IPOSizeML": 3.9,
+    "IPOSizeML": 0.0,
     "SETMAI": "mai",
     "IPOPrice": 3.9,
     "IPOLast": 0.0
@@ -674,9 +684,9 @@
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2018-10-17T00:00:00",
-    "IPOSizeML": 25.0,
+    "IPOSizeML": 0.0,
     "SETMAI": "SET",
-    "IPOPrice": 0.0,
+    "IPOPrice": 25.0,
     "IPOLast": 0.0
   },
   {
