@@ -420,7 +420,7 @@ namespace AutomateOpenGraph
             token[0] = token[0].Trim();
             token[1] = token[1].Trim();
             token[2] = token[2].Trim();
-            if ( !Regex.IsMatch(token[0], @"-F$")) //!Regex.IsMatch(token[0], @"\d\d\d") &&
+            if ( !Regex.IsMatch(token[0], @"-F$") && !Regex.IsMatch(token[0], @"\d\d\d")) //!Regex.IsMatch(token[0], @"\d\d\d") &&
             {
                 //Array.BinarySearch(ignoreArr, token[0]) < 0
                 //if ( !ignoreArr.Contains(token[0]) && !Regex.IsMatch(token[0], @"IF$"))
