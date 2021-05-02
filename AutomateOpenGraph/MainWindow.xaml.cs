@@ -43,6 +43,7 @@ namespace AutomateOpenGraph
 
         private List<StockInfo> ipoList = new List<StockInfo>();
         private List<StockInfo> ipoWarList = new List<StockInfo>();
+        private List<StockInfo> sectorList = new List<StockInfo>();
 
         private string mode = "";
 
@@ -124,7 +125,7 @@ namespace AutomateOpenGraph
 
             string text;
             IComparer<StockInfo> sortbyDate = new SortByDate();
-            //CreateIPOList();
+
             try
             {
                 text = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "ipo.json");
@@ -138,11 +139,7 @@ namespace AutomateOpenGraph
             }
 
 
-            //string json = JsonConvert.SerializeObject(ipoList);
-            //Console.WriteLine(json);
-            //List<StockInfo> listfromJson = JsonConvert.DeserializeObject<List<StockInfo>>(json);
 
-            //CreateIPOWarList();
 
             try
             {
@@ -156,9 +153,18 @@ namespace AutomateOpenGraph
                 lbMsg.Content = lbMsg.Content + e.Message;
             }
 
+            try
+            {
+                text = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "sector.json");
+                sectorList = JsonConvert.DeserializeObject<List<StockInfo>>(text);
+                //ipoWarList.Sort(sortbyDate);
+            }
+            catch (Exception e)
+            {
 
-            //string json2 = JsonConvert.SerializeObject(ipoWarList);
-            //Console.WriteLine(json2);
+                lbMsg.Content = lbMsg.Content + e.Message;
+            }
+
 
             Console.WriteLine(AppDomain.CurrentDomain.BaseDirectory + " " +  System.Reflection.Assembly.GetEntryAssembly().Location);
 
@@ -738,6 +744,12 @@ namespace AutomateOpenGraph
         {
             mode = "Custom";
             SetListToGrid(stockDataListCustom);
+        }
+
+        private void SectorButton_Click(object sender, RoutedEventArgs e)
+        {
+            mode = "Sector";
+            SetListToGrid(sectorList);
         }
     }
 }

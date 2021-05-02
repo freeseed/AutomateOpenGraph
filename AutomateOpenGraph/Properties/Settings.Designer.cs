@@ -63,7 +63,7 @@ namespace AutomateOpenGraph.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("BLAND")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string customlist {
             get {
                 return ((string)(this["customlist"]));

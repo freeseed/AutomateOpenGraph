@@ -12,7 +12,7 @@
       <Value Profile="(Default)">7</Value>
     </Setting>
     <Setting Name="customlist" Type="System.String" Scope="User">
-      <Value Profile="(Default)">BLAND</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="market" Type="System.String" Scope="User">
       <Value Profile="(Default)">SET,SET50,TFEX,MAI,^DJIA,^NIX,^HSKI,^DAX,^FTSE,^JKSE,^KOSPI,RSS3F_CON,BDI,NYMEX</Value>

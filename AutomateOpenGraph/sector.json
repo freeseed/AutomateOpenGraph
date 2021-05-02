@@ -1,0 +1,273 @@
+﻿[
+  {
+    "StockName": "$AGRI",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$FOOD",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$HOME",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$PERSON",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$FASHION",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$BANK",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$FIN",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$INSUR",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$PETRO",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$PKG",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$PAPER",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$AUTO",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$IMM",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$STEEL",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$CONMAT",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$PROP",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$CONS",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$ENERG",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$MINE",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$COMM",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$MEDIA",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$HELTH",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$TOURISM",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$PROF",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$TRANS",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$ICT",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "$ETRON",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-29T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SECTOR",
+    "IPOPrice": 0,
+    "IPOLast": 0.0
+  }
+
+]

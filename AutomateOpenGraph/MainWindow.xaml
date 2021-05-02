@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutomateOpenGraph"
         mc:Ignorable="d"
-        Title="AutomateOpenGraph" Height="835" Width="1020" WindowStartupLocation="CenterScreen" >
+        Title="AutomateOpenGraph" Height="835" Width="1142" WindowStartupLocation="CenterScreen" >
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="OpenCommand_Executed" CanExecute="OpenCommand_CanExecute" />
         <CommandBinding Command="ApplicationCommands.Paste" Executed="StartCommand_Executed" CanExecute="StartCommand_CanExecute" />
@@ -71,6 +71,8 @@
                 <Button  FontWeight="Bold" FontSize="14"  ToolTip="IPO" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="IPOButton_Click" Content="| IPO"/>
 
                 <Button  FontWeight="Bold" FontSize="14"  ToolTip="IPO War" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="IPOWarButton_Click" Content="| IPO War"/>
+
+                <Button  FontWeight="Bold" FontSize="14"  ToolTip="SECTOR" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="SectorButton_Click" Content="| Sector"/>
 
                 <Button  FontWeight="Bold" FontSize="14"  ToolTip="Custom" Margin="2,0"  Background="{x:Null}" BorderBrush="{x:Null}" Click="CustomButton_Click" Content="| Custom"/>
 
