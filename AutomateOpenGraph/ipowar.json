@@ -1,4 +1,104 @@
 [
+   {
+    "StockName": "TFG-W3",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-25T00:00:00",
+    "IPOSizeML": 560,
+    "SETMAI": "SET",
+    "IPOPrice": 5.50,
+    "IPOLast": 0.0
+  },
+   {
+    "StockName": "PIMO-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-24T00:00:00",
+    "IPOSizeML": 176,
+    "SETMAI": "mai",
+    "IPOPrice": 1.75,
+    "IPOLast": 0.0
+  },
+   {
+    "StockName": "CEN-W5",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-24T00:00:00",
+    "IPOSizeML": 372,
+    "SETMAI": "SET",
+    "IPOPrice": 2.14,
+    "IPOLast": 0.0
+  },
+   {
+    "StockName": "CGD-W5",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-21T00:00:00",
+    "IPOSizeML": 1653,
+    "SETMAI": "SET",
+    "IPOPrice": 1.00,
+    "IPOLast": 0.0
+  },
+   {
+    "StockName": "SABUY-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-18T00:00:00",
+    "IPOSizeML": 102,
+    "SETMAI": "SET",
+    "IPOPrice": 3.25,
+    "IPOLast": 0.0
+  },
+   {
+    "StockName": "AIE-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-17T00:00:00",
+    "IPOSizeML": 1046,
+    "SETMAI": "mai",
+    "IPOPrice": 0.25,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "VL-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-14T00:00:00",
+    "IPOSizeML": 400,
+    "SETMAI": "mai",
+    "IPOPrice": 0.5,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "K-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-12T00:00:00",
+    "IPOSizeML": 112,
+    "SETMAI": "mai",
+    "IPOPrice": 1.00,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "SONIC-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-06T00:00:00",
+    "IPOSizeML": 275,
+    "SETMAI": "mai",
+    "IPOPrice": 1.00,
+    "IPOLast": 0.0
+  },
+  {
+    "StockName": "ZIGA-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-04-19T00:00:00",
+    "IPOSizeML": 242,
+    "SETMAI": "mai",
+    "IPOPrice": 1.00,
+    "IPOLast": 0.0
+  },
   {
     "StockName": "B52-W3",
     "ChangePercent": 0.0,
