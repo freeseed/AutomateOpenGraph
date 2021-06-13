@@ -1,5 +1,82 @@
 [
-   {
+  {
+    "StockName": "SAMART-W3",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-06-14T00:00:00",
+    "IPOSizeML": 167,
+    "SETMAI": "SET",
+    "IPOPrice": 10,
+    "IPOLast": 0.0,
+    "SpDate": "2024-04-17T00:00:00"
+  },
+  {
+    "StockName": "NRF-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-06-11T00:00:00",
+    "IPOSizeML": 67,
+    "SETMAI": "SET",
+    "IPOPrice": 10,
+    "IPOLast": 0.0,
+    "SpDate": "2023-04-26T00:00:00"
+  },
+  {
+    "StockName": "RS-W4",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-06-11T00:00:00",
+    "IPOSizeML": 191,
+    "SETMAI": "SET",
+    "IPOPrice": 29,
+    "IPOLast": 0.0,
+    "SpDate": "2024-04-23T00:00:00"
+  },
+  {
+    "StockName": "NUSA-W4",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-06-07T00:00:00",
+    "IPOSizeML": 1909,
+    "SETMAI": "SET",
+    "IPOPrice": 1.00,
+    "IPOLast": 0.0,
+    "SpDate": "2023-04-17T00:00:00"
+  },
+  {
+    "StockName": "MILL-W6",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-06-01T00:00:00",
+    "IPOSizeML": 868,
+    "SETMAI": "SET",
+    "IPOPrice": 1.50,
+    "IPOLast": 0.0,
+    "SpDate": "2024-04-23T00:00:00"
+  },
+  {
+    "StockName": "MINT-W9",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-28T00:00:00",
+    "IPOSizeML": 560,
+    "SETMAI": "SET",
+    "IPOPrice": 31,
+    "IPOLast": 0.0,
+    "SpDate": "2024-01-05T00:00:00"
+  },
+  {
+    "StockName": "MINT-W8",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-05-28T00:00:00",
+    "IPOSizeML": 560,
+    "SETMAI": "SET",
+    "IPOPrice": 28,
+    "IPOLast": 0.0,
+    "SpDate": "2023-04-05T00:00:00"
+  },
+  {
     "StockName": "TFG-W3",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -7,9 +84,10 @@
     "IPOSizeML": 560,
     "SETMAI": "SET",
     "IPOPrice": 5.50,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2024-04-14T00:00:00"
   },
-   {
+  {
     "StockName": "PIMO-W2",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -17,9 +95,10 @@
     "IPOSizeML": 176,
     "SETMAI": "mai",
     "IPOPrice": 1.75,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-04-11T00:00:00"
   },
-   {
+  {
     "StockName": "CEN-W5",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -27,9 +106,10 @@
     "IPOSizeML": 372,
     "SETMAI": "SET",
     "IPOPrice": 2.14,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2026-04-12T00:00:00"
   },
-   {
+  {
     "StockName": "CGD-W5",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -37,9 +117,10 @@
     "IPOSizeML": 1653,
     "SETMAI": "SET",
     "IPOPrice": 1.00,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-03-22T00:00:00"
   },
-   {
+  {
     "StockName": "SABUY-W1",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -47,9 +128,10 @@
     "IPOSizeML": 102,
     "SETMAI": "SET",
     "IPOPrice": 3.25,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2024-04-10T00:00:00"
   },
-   {
+  {
     "StockName": "AIE-W2",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -57,7 +139,8 @@
     "IPOSizeML": 1046,
     "SETMAI": "mai",
     "IPOPrice": 0.25,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-04-04T00:00:00"
   },
   {
     "StockName": "VL-W1",
@@ -67,7 +150,8 @@
     "IPOSizeML": 400,
     "SETMAI": "mai",
     "IPOPrice": 0.5,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-03-27T00:00:00"
   },
   {
     "StockName": "K-W1",
@@ -77,7 +161,8 @@
     "IPOSizeML": 112,
     "SETMAI": "mai",
     "IPOPrice": 1.00,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-09-06T00:00:00"
   },
   {
     "StockName": "SONIC-W1",
@@ -87,7 +172,8 @@
     "IPOSizeML": 275,
     "SETMAI": "mai",
     "IPOPrice": 1.00,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-03-21T00:00:00"
   },
   {
     "StockName": "ZIGA-W1",
@@ -97,7 +183,8 @@
     "IPOSizeML": 242,
     "SETMAI": "mai",
     "IPOPrice": 1.00,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-2-28T00:00:00"
   },
   {
     "StockName": "B52-W3",
@@ -107,7 +194,8 @@
     "IPOSizeML": 240,
     "SETMAI": "SET",
     "IPOPrice": 0.25,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-01-14T00:00:00"
   },
   {
     "StockName": "AS-W2",
@@ -117,7 +205,8 @@
     "IPOSizeML": 83,
     "SETMAI": "SET",
     "IPOPrice": 3.50,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-12-24T00:00:00"
   },
   {
     "StockName": "TFI-W1",
@@ -127,7 +216,8 @@
     "IPOSizeML": 6142,
     "SETMAI": "SET",
     "IPOPrice": 0.15,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2025-12-06T00:00:00"
   },
   {
     "StockName": "W-W5",
@@ -137,7 +227,8 @@
     "IPOSizeML": 4883,
     "SETMAI": "SET",
     "IPOPrice": 0.14,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2024-09-30T00:00:00"
   },
   {
     "StockName": "NOBLE-W2",
@@ -147,7 +238,8 @@
     "IPOSizeML": 324,
     "SETMAI": "SET",
     "IPOPrice": 8,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-12-12T00:00:00"
   },
   {
     "StockName": "STARK-W1",
@@ -157,7 +249,8 @@
     "IPOSizeML": 3968,
     "SETMAI": "SET",
     "IPOPrice": 5,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2024-12-03T00:00:00"
   },
   {
     "StockName": "JMT-W3",
@@ -167,7 +260,8 @@
     "IPOSizeML": 100,
     "SETMAI": "SET",
     "IPOPrice": 42,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-04-16T00:00:00"
   },
   {
     "StockName": "WAVE-W2",
@@ -177,7 +271,8 @@
     "IPOSizeML": 156,
     "SETMAI": "SET",
     "IPOPrice": 0.7,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-09-27T00:00:00"
   },
   {
     "StockName": "DIMET-W4",
@@ -187,7 +282,8 @@
     "IPOSizeML": 806,
     "SETMAI": "SET",
     "IPOPrice": 0.5,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-08-29T00:00:00"
   },
   {
     "StockName": "JCK-W6",
@@ -197,7 +293,8 @@
     "IPOSizeML": 1073,
     "SETMAI": "SET",
     "IPOPrice": 2.0,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-10-12T00:00:00"
   },
   {
     "StockName": "BCPG-W2",
@@ -207,7 +304,8 @@
     "IPOSizeML": 89,
     "SETMAI": "SET",
     "IPOPrice": 8.0,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-10-13T00:00:00"
   },
   {
     "StockName": "BCPG-W1",
@@ -217,7 +315,8 @@
     "IPOSizeML": 89,
     "SETMAI": "SET",
     "IPOPrice": 8.0,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-10-13T00:00:00"
   },
   {
     "StockName": "MORE-W2",
@@ -227,7 +326,8 @@
     "IPOSizeML": 543,
     "SETMAI": "SET",
     "IPOPrice": 2.0,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-09-21T00:00:00"
   },
   {
     "StockName": "CWT-W5",
@@ -237,7 +337,8 @@
     "IPOSizeML": 63,
     "SETMAI": "SET",
     "IPOPrice": 3.50,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-08-29T00:00:00"
   },
   {
     "StockName": "AEC-W6",
@@ -247,7 +348,8 @@
     "IPOSizeML": 1530,
     "SETMAI": "SET",
     "IPOPrice": 0.20,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-08-08T00:00:00"
   },
   {
     "StockName": "SAWAD-W2",
@@ -257,7 +359,8 @@
     "IPOSizeML": 54,
     "SETMAI": "SET",
     "IPOPrice": 100,
-    "IPOLast": 0.0
+    "IPOLast": 0.0,
+    "SpDate": "2025-07-30T00:00:00"
   },
   {
     "StockName": "ALL-W1",
@@ -267,7 +370,8 @@
     "IPOSizeML": 140,
     "SETMAI": "mai",
     "IPOPrice": 2.8,
-    "IPOLast": 3.0
+    "IPOLast": 3.0,
+    "SpDate": "2022-07-17T00:00:00"
   },
   {
     "StockName": "ITEL-W2",
@@ -277,7 +381,8 @@
     "IPOSizeML": 250,
     "SETMAI": "mai",
     "IPOPrice": 3.0,
-    "IPOLast": 4.0
+    "IPOLast": 0.0,
+    "SpDate": "2021-07-19T00:00:00"
   },
   {
     "StockName": "MINT-W7",
@@ -287,7 +392,8 @@
     "IPOSizeML": 235,
     "SETMAI": "SET",
     "IPOPrice": 21.6,
-    "IPOLast": 5.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-06-30T00:00:00"
   },
   {
     "StockName": "UREKA-W2",
@@ -297,7 +403,8 @@
     "IPOSizeML": 295,
     "SETMAI": "SET",
     "IPOPrice": 1.0,
-    "IPOLast": 52.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-05-29T00:00:00"
   },
   {
     "StockName": "JMART-W3",
@@ -307,7 +414,8 @@
     "IPOSizeML": 100,
     "SETMAI": "SET",
     "IPOPrice": 11.0,
-    "IPOLast": 59.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-05-17T00:00:00"
   },
   {
     "StockName": "JMART-W4",
@@ -317,7 +425,8 @@
     "IPOSizeML": 100,
     "SETMAI": "SET",
     "IPOPrice": 15.0,
-    "IPOLast": 59.0
+    "IPOLast": 0.0,
+    "SpDate": "2024-05-18T00:00:00"
   },
   {
     "StockName": "NER-W1",
@@ -327,7 +436,8 @@
     "IPOSizeML": 307,
     "SETMAI": "SET",
     "IPOPrice": 1.8,
-    "IPOLast": 74.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-04-26T00:00:00"
   },
   {
     "StockName": "NEX-W2",
@@ -337,7 +447,8 @@
     "IPOSizeML": 223,
     "SETMAI": "SET",
     "IPOPrice": 1.0,
-    "IPOLast": 74.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-04-19T00:00:00"
   },
   {
     "StockName": "CHAYO-W1",
@@ -347,7 +458,8 @@
     "IPOSizeML": 209,
     "SETMAI": "SET",
     "IPOPrice": 6.5,
-    "IPOLast": 83.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-04-27T00:00:00"
   },
   {
     "StockName": "III-W1",
@@ -357,7 +469,8 @@
     "IPOSizeML": 152,
     "SETMAI": "SET",
     "IPOPrice": 6.0,
-    "IPOLast": 95.0
+    "IPOLast": 0.0,
+    "SpDate": "2023-04-13T00:00:00"
   },
   {
     "StockName": "TAPAC-W4",
@@ -367,7 +480,8 @@
     "IPOSizeML": 205,
     "SETMAI": "SET",
     "IPOPrice": 9.0,
-    "IPOLast": 140.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-02-18T00:00:00"
   },
   {
     "StockName": "D-W1",
@@ -377,16 +491,7 @@
     "IPOSizeML": 40,
     "SETMAI": "SET",
     "IPOPrice": 4.0,
-    "IPOLast": 167.0
-  },
-  {
-    "StockName": "B-W5",
-    "ChangePercent": 0.0,
-    "ClosedPrice": 0.0,
-    "IPODate": "2019-09-26T00:00:00",
-    "IPOSizeML": 290,
-    "SETMAI": "SET",
-    "IPOPrice": 0.35,
-    "IPOLast": 340.0
+    "IPOLast": 0.0,
+    "SpDate": "2022-02-04T00:00:00"
   }
 ]

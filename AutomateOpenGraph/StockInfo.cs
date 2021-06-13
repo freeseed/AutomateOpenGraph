@@ -15,6 +15,7 @@ namespace AutomateOpenGraph
         public double IPOSizeML { get; set; }
         public string SETMAI { get; set; }
         public double IPOPrice { get; set; }
+        public DateTime SpDate { get; set; }
 
 
         public StockInfo()
@@ -29,13 +30,14 @@ namespace AutomateOpenGraph
             this.ClosedPrice = ClosedPrice;
         }
 
-        public StockInfo(string StockName, DateTime IPODate,double IPOSizeML, string SETMAI, double IPOPrice)
+        public StockInfo(string StockName, DateTime IPODate,double IPOSizeML, string SETMAI, double IPOPrice, DateTime SpDate)
         {
             this.StockName = StockName;
             this.IPODate = IPODate;
             this.IPOSizeML = IPOSizeML;
             this.SETMAI = SETMAI;
             this.IPOPrice = IPOPrice;
+            this.SpDate = SpDate;
 
         }
 
@@ -61,5 +63,13 @@ namespace AutomateOpenGraph
                 return Math.Ceiling( DateTime.Now.Subtract(this.IPODate).TotalDays);
             }
         } 
+
+        public double DayToSP
+        {
+            get
+            {
+                return Math.Ceiling(this.SpDate.Subtract(DateTime.Now).TotalDays);
+            }
+        }
     }
 }

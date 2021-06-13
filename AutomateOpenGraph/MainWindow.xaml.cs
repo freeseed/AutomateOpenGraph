@@ -173,7 +173,7 @@ namespace AutomateOpenGraph
 
         private void CreateIPOList()
         {
-            ipoList.Add(new StockInfo("ETC", new DateTime(2020, 8, 18), 5824, "mai", 2.6));  // มุกเดิม pe 85 แต่ทำ eps มา เอาแบบสูงสุดที่เคยมี 
+           /* ipoList.Add(new StockInfo("ETC", new DateTime(2020, 8, 18), 5824, "mai", 2.6));  // มุกเดิม pe 85 แต่ทำ eps มา เอาแบบสูงสุดที่เคยมี 
 
             //string json = JsonConvert.SerializeObject((new StockInfo("ETC", new DateTime(2020, 8, 18), 5824, "mai", 2.6)));
             //Console.WriteLine(json);
@@ -218,13 +218,13 @@ namespace AutomateOpenGraph
 
             ipoList.Add(new StockInfo("CAZ", new DateTime(2019, 1, 22), 1092, "mai", 3.9));
             ipoList.Add(new StockInfo("BC", new DateTime(2019, 11, 14), 1450, "mai", 2.86));
-
+            */
 
         }
 
         private void CreateIPOWarList()
         {
-            ipoWarList.Add(new StockInfo("ALL-W1", new DateTime(2020, 8, 28), 140, "mai", 2.8));
+          /*  ipoWarList.Add(new StockInfo("ALL-W1", new DateTime(2020, 8, 28), 140, "mai", 2.8));
             ipoWarList.Add(new StockInfo("ITEL-W2", new DateTime(2020, 8, 27), 250, "mai", 3.00));
             ipoWarList.Add(new StockInfo("MINT-W7", new DateTime(2020, 8, 26), 235, "SET", 21.6));
             ipoWarList.Add(new StockInfo("UREKA-W2", new DateTime(2020, 7, 10), 295, "SET", 1));
@@ -243,7 +243,7 @@ namespace AutomateOpenGraph
             ipoWarList.Add(new StockInfo("SMART-W2", new DateTime(2019, 10, 22), 91, "SET", 1.5));
             ipoWarList.Add(new StockInfo("B-W5", new DateTime(2019, 9, 26), 290, "SET", 0.35));
 
-
+            */
         }
 
         private string TfexSeriesCode
