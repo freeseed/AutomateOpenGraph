@@ -1,5 +1,15 @@
 [
   {
+    "StockName": "MENA",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-07T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "mai",
+    "IPOPrice": 1.20,
+    "IPOLast": 0.0
+  },
+  {
     "StockName": "ADD",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -1469,5 +1479,5 @@
     "IPOPrice": 1.15,
     "IPOLast": 0.0
   }
-  
+
 ]

@@ -1,5 +1,71 @@
 [
   {
+    "StockName": "BM-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-08T00:00:00",
+    "IPOSizeML": 146,
+    "SETMAI": "SET",
+    "IPOPrice": 1,
+    "IPOLast": 0.0,
+    "SpDate": "2023-05-25T00:00:00"
+  },
+  {
+    "StockName": "CHAYO-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-02T00:00:00",
+    "IPOSizeML": 212,
+    "SETMAI": "SET",
+    "IPOPrice": 10.25,
+    "IPOLast": 0.0,
+    "SpDate": "2023-05-22T00:00:00"
+  },
+  {
+    "StockName": "SSP-W2",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-01T00:00:00",
+    "IPOSizeML": 253,
+    "SETMAI": "SET",
+    "IPOPrice": 20,
+    "IPOLast": 0.0,
+    "SpDate": "2025-04-22T00:00:00"
+  },
+  {
+    "StockName": "SSP-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-01T00:00:00",
+    "IPOSizeML": 101,
+    "SETMAI": "SET",
+    "IPOPrice": 12,
+    "IPOLast": 0.0,
+    "SpDate": "2022-01-22T00:00:00"
+  },
+  {
+    "StockName": "ERW-W3",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-06-28T00:00:00",
+    "IPOSizeML": 359,
+    "SETMAI": "SET",
+    "IPOPrice": 3,
+    "IPOLast": 0.0,
+    "SpDate": "2024-05-14T00:00:00"
+  },
+  {
+    "StockName": "ECF-W4",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-06-22T00:00:00",
+    "IPOSizeML": 191,
+    "SETMAI": "mai",
+    "IPOPrice": 2,
+    "IPOLast": 0.0,
+    "SpDate": "2024-05-02T00:00:00"
+  },
+  {
     "StockName": "FLOYD-W1",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,

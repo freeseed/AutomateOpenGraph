@@ -436,7 +436,8 @@ namespace AutomateOpenGraph
                 s.ChangePercent = decimal.TryParse(token[1], out decimal tmpresult) ? tmpresult : 0;
                 s.ClosedPrice = decimal.TryParse(token[2], out tmpresult) ? tmpresult : 0;
 
-                stockDataList.Add(s);
+                if (!Regex.IsMatch(token[0], @"-W"))
+                    stockDataList.Add(s);
 
                 //if (token[0] == "ALL-W1")
                 //    Console.WriteLine("Find Advance: " + token[0]);

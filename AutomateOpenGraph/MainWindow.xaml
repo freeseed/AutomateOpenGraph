@@ -107,7 +107,7 @@
                         <DataGridTextColumn Header="SET/Mai" Binding="{Binding SETMAI}" />
                         <DataGridTextColumn Header="Size(M shares)" Binding="{Binding IPOSizeML}" />
                         <DataGridTextColumn Header="SP Date" Binding="{Binding SpDate,StringFormat='yyyy-MM-dd'}" />
-                        <DataGridTextColumn Header="Days" Binding="{Binding DayToSP}" />
+                        <DataGridTextColumn Header="DayToSP" Binding="{Binding DayToSP}" />
 
                     </DataGrid.Columns>
                 </DataGrid>
