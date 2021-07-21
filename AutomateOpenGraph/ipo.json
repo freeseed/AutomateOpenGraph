@@ -1,5 +1,15 @@
 [
   {
+    "StockName": "SNNP",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-20T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SET",
+    "IPOPrice": 9.20,
+    "IPOLast": 0.0
+  },
+  {
     "StockName": "MENA",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,

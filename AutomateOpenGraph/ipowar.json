@@ -1,5 +1,60 @@
 [
   {
+    "StockName": "BROOK-W7",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-21T00:00:00",
+    "IPOSizeML": 682,
+    "SETMAI": "SET",
+    "IPOPrice": 1.3,
+    "IPOLast": 0.0,
+    "SpDate": "2026-06-12T00:00:00"
+  },
+  {
+    "StockName": "BROOK-W6",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-21T00:00:00",
+    "IPOSizeML": 2731,
+    "SETMAI": "SET",
+    "IPOPrice": 0.65,
+    "IPOLast": 0.0,
+    "SpDate": "2024-06-12T00:00:00"
+  },
+  {
+    "StockName": "MVP-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-20T00:00:00",
+    "IPOSizeML": 100,
+    "SETMAI": "SET",
+    "IPOPrice": 1.2,
+    "IPOLast": 0.0,
+    "SpDate": "2023-06-06T00:00:00"
+  },
+  {
+    "StockName": "KWM-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-15T00:00:00",
+    "IPOSizeML": 140,
+    "SETMAI": "SET",
+    "IPOPrice": 1.5,
+    "IPOLast": 0.0,
+    "SpDate": "2023-06-04T00:00:00"
+  },
+  {
+    "StockName": "SMT-W3",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-07-09T00:00:00",
+    "IPOSizeML": 209,
+    "SETMAI": "SET",
+    "IPOPrice": 4,
+    "IPOLast": 0.0,
+    "SpDate": "2024-05-30T00:00:00"
+  },
+  {
     "StockName": "BM-W2",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -8,7 +63,7 @@
     "SETMAI": "SET",
     "IPOPrice": 1,
     "IPOLast": 0.0,
-    "SpDate": "2023-05-25T00:00:00"
+    "SpDate": "2023-05-24T00:00:00"
   },
   {
     "StockName": "CHAYO-W2",
@@ -77,7 +132,7 @@
     "SpDate": "2024-04-30T00:00:00"
   },
   {
-    "StockName": "UWC-W3",
+    "StockName": "STOWER-W3",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
     "IPODate": "2021-06-17T00:00:00",
@@ -503,7 +558,7 @@
     "SETMAI": "mai",
     "IPOPrice": 3.0,
     "IPOLast": 0.0,
-    "SpDate": "2021-07-19T00:00:00"
+    "SpDate": "2021-07-23T00:00:00"
   },
   {
     "StockName": "MINT-W7",
@@ -635,7 +690,7 @@
     "SETMAI": "SET",
     "IPOPrice": 18.6,
     "IPOLast": 0.0,
-    "SpDate": "2021-07-27T00:00:00"
+    "SpDate": "2021-08-04T00:00:00"
   },
   {
     "StockName": "MBK-W1",
@@ -680,17 +735,6 @@
     "IPOPrice": 0.97,
     "IPOLast": 0.0,
     "SpDate": "2022-03-08T00:00:00"
-  },
-  {
-    "StockName": "SIMAT-W4",
-    "ChangePercent": 0.0,
-    "ClosedPrice": 0.0,
-    "IPODate": "2020-01-01T00:00:00",
-    "IPOSizeML": 127,
-    "SETMAI": "SET",
-    "IPOPrice": 0.97,
-    "IPOLast": 0.0,
-    "SpDate": "2021-06-09T00:00:00"
   },
   {
     "StockName": "J-W1",
@@ -988,17 +1032,6 @@
     "IPOPrice": 0.15,
     "IPOLast": 0.0,
     "SpDate": "2023-09-15T00:00:00"
-  },
-  {
-    "StockName": "NVD-W1",
-    "ChangePercent": 0.0,
-    "ClosedPrice": 0.0,
-    "IPODate": "2020-01-01T00:00:00",
-    "IPOSizeML": 276,
-    "SETMAI": "SET",
-    "IPOPrice": 7.86,
-    "IPOLast": 0.0,
-    "SpDate": "2021-06-16T00:00:00"
   },
   {
     "StockName": "MACO-W2",
