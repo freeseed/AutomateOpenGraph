@@ -1,5 +1,16 @@
 [
   {
+    "StockName": "JCKH-W1",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-08-02T00:00:00",
+    "IPOSizeML": 223,
+    "SETMAI": "SET",
+    "IPOPrice": 0.25,
+    "IPOLast": 0.0,
+    "SpDate": "2024-06-15T00:00:00"
+  },
+  {
     "StockName": "BROOK-W7",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
@@ -1042,7 +1053,7 @@
     "SETMAI": "SET",
     "IPOPrice": 2.1,
     "IPOLast": 0.0,
-    "SpDate": "2021-07-27T00:00:00"
+    "SpDate": "2021-08-04T00:00:00"
   }
 
 ]
