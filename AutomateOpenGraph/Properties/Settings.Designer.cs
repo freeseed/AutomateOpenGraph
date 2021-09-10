@@ -25,27 +25,15 @@ namespace AutomateOpenGraph.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ADVANC,AOT,AWC,BAM,BBL,BDMS,BEM,BGRIM,BH,BJC,BTS,CBG,COM7,CPALL,CPF,CPN,CRC,DELTA" +
-            ",DTAC,EA,EGCO,GLOBAL,GPSC,GULF,HMPRO,INTUCH,IVL,KBANK,KTB,KTC,LH,MINT,MTC,OSP,PT" +
-            "T,PTTEP,PTTGC,RATCH,SAWAD,SCB,SCC,SCGP,TISCO,TTB,TOA,TOP,TRUE,TU,VGI,X-X,OR")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ADVANC,AOT,BBL,BDMS,BEM,BGRIM,BH,BJC,BTS,CBG,COM7,CPALL,CPF,CPN,CRC,DELTA,DTAC,EA" +
+            ",EGCO,GLOBAL,GPSC,GULF,HMPRO,INTUCH,IRPC,IVL,KBANK,KCE,KTB,KTC,LH,MINT,MTC,OR,OS" +
+            "P,PTT,PTTEP,PTTGC,RATCH,SAWAD,SCB,SCC,SCGP,STA,STGT,TISCO,TOP,TRUE,TTB,TU")]
         public string set50 {
             get {
                 return ((string)(this["set50"]));
             }
             set {
                 this["set50"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"ADVANC,AEONTS,AMATA,AOT,AP,AWC,BANPU,BPP,BBL,BCH,BCP,BCPG,BDMS,BEC,BEM,BGRIM,BH,BJC,BANPU,BTS,CBG,CENTEL,CK,CKP,COM7,CPALL,CPF,CPN,CRC,DELTA,DTAC,EA,EGCO,EPG,ERW,ESSO,GFPT,GLOBAL,GPSC,GULF,GUNKUL,HANA,HMPRO,INTUCH,IRPC,IVL,JAS,JMT,KBANK,KCE,KKP,KTB,KTC,LH,MAJOR,MEGA,MINT,MTC,ORI,OSP,PLANB,PRM,PSH,PTG,PTT,PTTEP,PTTGC,RATCH,RS,SAWAD,SCB,SCC,SCGP,SGP,SPALI,SPRC,STA,STEC,SUPER,TASCO,TCAP,THANI,TISCO,TKN,TTB,TOA,TOP,TPIPP,TQM,TRUE,TU,VGI,WHA,X-X,DOHOME,AAV,ACE,PSL,JMART,BAM,MAKRO,STGT,NER,SPCG,BEAUTY,THCOM,AMANAH,WORK,BEC,AU,TVO,KEX,RBF,DOD,OR,SYNEX,JKN,TIDLOR,TTA,CHAYO,RCL,PSL,TTA")]
-        public string set100 {
-            get {
-                return ((string)(this["set100"]));
-            }
-            set {
-                this["set100"] = value;
             }
         }
         
@@ -94,6 +82,18 @@ namespace AutomateOpenGraph.Properties {
             }
             set {
                 this["datapath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"AAV,ACE,ADVANC,AEONTS,AMATA,AOT,AP,BAM,BANPU,BBL,BCH,BCP,BCPG,BDMS,BEC,BEM,BGRIM,BH,BJC,BTS,CBG,CENTEL,CHG,CK,CKP,COM7,CPALL,CPF,CPN,CRC,DELTA,DOHOME,DTAC,EA,EGCO,ESSO,GLOBAL,GPSC,GULF,GUNKUL,HANA,HMPRO,ICHI,INTUCH,IRPC,IVL,JAS,JMART,JMT,KBANK,KCE,KKP,KTB,KTC,LH,MAJOR,MEGA,MINT,MTC,NRF,OR,ORI,OSP,PLANB,PRM,PSL,PTG,PTL,PTT,PTTEP,PTTGC,QH,RATCH,RBF,RS,SAWAD,SCB,SCC,SCGP,SINGER,SPALI,SPRC,STA,STEC,STGT,SUPER,TASCO,TCAP,THANI,TISCO,TKN,TOP,TQM,TRUE,TTB,TU,TVO,VGI,WHA,X-X,MAKRO,NER,SPCG,BEAUTY,THCOM,AMANAH,WORK,BEC,AU,TVO,KEX,DOD,SYNEX,JKN,TIDLOR,CHAYO,RCL,TTA,AWC")]
+        public string set100 {
+            get {
+                return ((string)(this["set100"]));
+            }
+            set {
+                this["set100"] = value;
             }
         }
     }

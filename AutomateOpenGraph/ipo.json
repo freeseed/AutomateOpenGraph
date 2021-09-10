@@ -1,5 +1,15 @@
 [
   {
+    "StockName": "CV",
+    "ChangePercent": 0.0,
+    "ClosedPrice": 0.0,
+    "IPODate": "2021-09-02T00:00:00",
+    "IPOSizeML": 0,
+    "SETMAI": "SET",
+    "IPOPrice": 3.90,
+    "IPOLast": 0.0
+  },
+  {
     "StockName": "AMR",
     "ChangePercent": 0.0,
     "ClosedPrice": 0.0,
